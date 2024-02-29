@@ -92,6 +92,7 @@
           </div>
 
           {% form 'product', product %}
+            {%- if product.selected_variant -%}
             <select name="id" id="ProductSelect-{{ product.id }}" class="product-form__variants">
               {% for variant in product.variants %}
                 {% if variant.available %}
@@ -101,6 +102,7 @@
                 {% endif %}
               {% endfor %}
             </select>
+            {%- endif -%}
 
             <button type="submit">
               ADD TO CART - {{ product.selected_or_first_available_variant.compare_at_price | money_with_currency }}
