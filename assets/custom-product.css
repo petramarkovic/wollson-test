@@ -19,5 +19,12 @@
 .custom-product__description {
   margin: 0 0 16px;
   font-size: 16px;
-  line-height24px;
+  line-height: 24px;
+}
+
+.custom-product__items h3 {
+  font-size: 16px;
+  line-height: 20.8px;
+  font-weight: 500;
+  margin-bottom: 8px;
 }

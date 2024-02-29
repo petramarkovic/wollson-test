@@ -38,16 +38,16 @@
 
           <div class="custom-product__items">
             {% if product.metafields.custom.bundle == true %}
-              What’s inside:
+              <h3>What’s inside:</h3>
             {% endif %}
             {% for variant in product.variants %}
               {% if variant.metafields.custom.included_product_1 != blank %}
                 <div class="custom-product__item">
                   <span class="custom-product__item-icon"></span>
                   <div class="custom-product__item-info">
-                    <h3 class="custom-product__item-title">
+                    <h4 class="custom-product__item-title">
                       1 X {{ variant.metafields.custom.included_product_1.value.title }}
-                    </h3>
+                    </h4>
                     <p class="custom-product__item-description">
                       {{ variant.metafields.custom.included_product_1.value.description }}
                     </p>
@@ -59,9 +59,9 @@
                 <div class="custom-product__item">
                   <span class="custom-product__item-icon"></span>
                   <div class="custom-product__item-info">
-                    <h3 class="custom-product__item-title">
+                    <h4 class="custom-product__item-title">
                       1 X {{ variant.metafields.custom.included_product_2.value.title }}
-                    </h3>
+                    </h4>
                     <p class="custom-product__item-description">
                       {{ variant.metafields.custom.included_product_2.value.description }}
                     </p>
@@ -73,9 +73,9 @@
                 <div class="custom-product__item">
                   <span class="custom-product__item-icon"></span>
                   <div class="custom-product__item-info">
-                    <h3 class="custom-product__item-title">
+                    <h4 class="custom-product__item-title">
                       1 X {{ variant.metafields.custom.included_product_3.value.title }}
-                    </h3>
+                    </h4>
                     <p class="custom-product__item-description">
                       {{ variant.metafields.custom.included_product_3.value.description }}
                     </p>
