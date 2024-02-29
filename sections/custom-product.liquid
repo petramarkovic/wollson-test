@@ -32,7 +32,7 @@
           <div>
             {% for variant in product.variants %}
               {% if variant.metafields.included_product_1 != blank %}
-                <h3>{{ variant.metafields.included_product_1.title }}</h3>
+                <h3>{{ variant.metafields.custom.included_product_1.title }}</h3>
               {% endif %}
             {% endfor %}
           </div>
