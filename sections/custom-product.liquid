@@ -94,10 +94,10 @@
           {% form 'product', product %}
             {%- if product.variants.size > 0 -%}
             <select name="id" id="ProductSelect-{{ product.id }}" class="product-form__variants">
-              {% for variant in product.variants %}
-                {% if variant.available %}
-                  <option value="{{ variant.id }}" {% if product.selected_or_first_available_variant == variant %} selected="selected"{% endif %}>
-                    {{ variant.title }}
+              {% for option in product.options_with_values %}
+                {% if option.available %}
+                  <option value="{{ option.value | escape }}" {% if option.selected_value == option.value %} selected="selected" {% endif %}>
+                    {{ option.title }}
                   </option>
                 {% endif %}
               {% endfor %}
