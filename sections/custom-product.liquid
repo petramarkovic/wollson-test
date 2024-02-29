@@ -104,7 +104,6 @@
             </select>
           {%- endif -%}
 
-            {% if product.options.size > 0 -%}
               {% for option in product.options -%}
                 <label>
                   Style
@@ -115,8 +114,7 @@
                   </select>
                 </label>
               {%- endfor %}
-            {%- endif %}
-
+              
             <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
             {{ form | payment_terms }}
 
