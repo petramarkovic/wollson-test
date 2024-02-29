@@ -40,6 +40,7 @@
   border-radius: 100px;
   width: 21px;
   height: 21px;
+  flex: 0 0 auto;
 }
 
 .custom-product__item-title {
