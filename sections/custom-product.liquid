@@ -113,6 +113,9 @@
       {% endif %}
     </div>
   </div>
+  <script type="application/json">
+    {{ product.variants | json }}
+  </script>
 </div>
 
 <script src="{{ 'media-gallery.js' | asset_url }}" defer="defer"></script>
