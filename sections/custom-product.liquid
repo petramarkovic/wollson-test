@@ -29,12 +29,50 @@
           <p class="custom-product__description">
             {{ product.description }}
           </p>
-          <div>
+          <div class="custom-product__items">
             What’s inside:
             {% for variant in product.variants %}
-              <h3>1 X {{ variant.metafields.custom.included_product_1.value.title }}</h3>
-              <h3>1 X {{ variant.metafields.custom.included_product_2.value.title }}</h3>
-              <h3>1 X {{ variant.metafields.custom.included_product_3.value.title }}</h3>
+              {% if variant.metafields.custom.included_product_1 != blank %}
+                <div class="custom-product__item">
+                  <span class="custom-product__item-icon"></span>
+                  <div class="custom-product__item-info">
+                    <h3 class="custom-product__item-title">
+                      1 X {{ variant.metafields.custom.included_product_1.value.title }}
+                    </h3>
+                    <p class="custom-product__item-description">
+                      {{ variant.metafields.custom.included_product_1.value.description }}
+                    </p>
+                  </div>
+                </div>
+              {% endif %}
+
+              {% if variant.metafields.custom.included_product_2 != blank %}
+                <div class="custom-product__item">
+                  <span class="custom-product__item-icon"></span>
+                  <div class="custom-product__item-info">
+                    <h3 class="custom-product__item-title">
+                      1 X {{ variant.metafields.custom.included_product_2.value.title }}
+                    </h3>
+                    <p class="custom-product__item-description">
+                      {{ variant.metafields.custom.included_product_2.value.description }}
+                    </p>
+                  </div>
+                </div>
+              {% endif %}
+
+              {% if variant.metafields.custom.included_product_3 != blank %}
+                <div class="custom-product__item">
+                  <span class="custom-product__item-icon"></span>
+                  <div class="custom-product__item-info">
+                    <h3 class="custom-product__item-title">
+                      1 X {{ variant.metafields.custom.included_product_3.value.title }}
+                    </h3>
+                    <p class="custom-product__item-description">
+                      {{ variant.metafields.custom.included_product_3.value.description }}
+                    </p>
+                  </div>
+                </div>
+              {% endif %}
             {% endfor %}
           </div>
         </div>
