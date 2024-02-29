@@ -84,7 +84,7 @@
           </div>
 
           {% form 'product', product %}
-            form_content
+            {{ form | payment_terms }}
           {% endform %}
         </div>
       {% endif %}
