@@ -15,6 +15,7 @@
 {%- endstyle -%}
 
 {% assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' %}
+{% assign product = section.settings.product %}
 
 <div class="section-{{ section.id }}-padding color-{{ section.settings.section_color_scheme }}">
   <div class="page-width">
@@ -24,8 +25,17 @@
           {% render 'product-media-gallery', product: section.settings.product %}
         </div>
         <div class="custom-product__col">
-          <h2 class="custom-product__title">{{ section.settings.product.title }}</h2>
-          <p class="custom-product__description">{{ section.settings.product.description }}</p>
+          <h2 class="custom-product__title">{{ product.title }}</h2>
+          <p class="custom-product__description">
+            {{ product.description }}
+          </p>
+          <div>
+            {% for variant in product.variants %}
+              {% if variant.metafields.included_product_1 != blank %}
+                <h3>{{ variant.metafields.included_product_1.title }}</h3>
+              {% endif %}
+            {% endfor %}
+          </div>
         </div>
       {% endif %}
     </div>
