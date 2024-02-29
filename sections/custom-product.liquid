@@ -83,7 +83,7 @@
             {% endfor %}
           </div>
 
-          <select name="id" id="ProductSelect-{{ section.id }}" class="product-form__variants no-js">
+          <select name="id" id="ProductSelect-{{ product.id }}" class="product-form__variants">
             {% for variant in product.variants %}
               {% if variant.available %}
                 <option>
