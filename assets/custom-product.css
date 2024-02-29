@@ -35,6 +35,10 @@
   margin-bottom: 8px;
 }
 
+.custom-product__item:last-of-type {
+  margin-bottom: 32px;
+}
+
 .custom-product__item-icon {
   align-self: flex-start;
   background-color: #F8C063;
