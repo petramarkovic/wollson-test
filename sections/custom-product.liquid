@@ -33,6 +33,7 @@
           <p class="custom-product__description">
             {{ product.description }}
           </p>
+
           <div class="custom-product__items">
             {% if product.metafields.custom.bundle == true %}
               What’s inside:
@@ -81,6 +82,10 @@
               {% endif %}
             {% endfor %}
           </div>
+
+          {% form 'product', product %}
+            form_content
+          {% endform %}
         </div>
       {% endif %}
     </div>
