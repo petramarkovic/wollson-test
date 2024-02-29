@@ -38,7 +38,8 @@
   align-self: flex-start;
   background-color: #F8C063;
   border-radius: 100px;
-  width: 21px;
+  flex: 1 1 12px;
+  max-width: 21px;
   height: 21px;
 }
 
