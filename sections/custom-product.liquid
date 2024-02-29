@@ -30,7 +30,7 @@
             {{ product.description }}
           </p>
           <div class="custom-product__items">
-            {% if product.variants != blank %}
+            {% if product.custom.bundle == true %}
               What’s inside:
             {% endif %}
             {% for variant in product.variants %}
