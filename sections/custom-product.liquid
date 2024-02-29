@@ -93,8 +93,11 @@
                 {% endif %}
               {% endfor %}
             </select>
-            form
-            <button type="submit">Add to cart</button>
+
+            <button type="submit">
+              ADD TO CART - {{ product.price -}}
+              {{- product.compare_at_price }}
+            </button>
           {% endform %}
         </div>
       {% endif %}
