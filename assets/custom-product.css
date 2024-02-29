@@ -34,6 +34,12 @@
   gap: 12px;
 }
 
+.custom-product__item-icon {
+  align-self: flex-start;
+  background-color: #F8C063;
+  border-radius: 100px;
+}
+
 .custom-product__item-title {
   margin: 0;
   font-size: 16px;
