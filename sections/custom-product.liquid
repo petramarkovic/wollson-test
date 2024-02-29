@@ -92,7 +92,7 @@
           </div>
 
           {% form 'product', product %}
-            {%- if product.variants.length != 0 -%}
+            {%- if product.variants.length > 0 -%}
             <select name="id" id="ProductSelect-{{ product.id }}" class="product-form__variants">
               {% for variant in product.variants %}
                 {% if variant.available %}
