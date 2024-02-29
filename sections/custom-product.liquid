@@ -97,7 +97,7 @@
               {% for option in product.options_with_values %}
                 {% if option.available %}
                   <option value="{{ option.value | escape }}" {% if option.selected_value == option.value %} selected="selected" {% endif %}>
-                    {{ option.title }}
+                     {{- option.name -}}
                   </option>
                 {% endif %}
               {% endfor %}
