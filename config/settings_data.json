@@ -1,9 +1,9 @@
 {
   "current": {
     "logo_width": 90,
-    "type_header_font": "assistant_n4",
+    "type_header_font": "poppins_n4",
     "heading_scale": 100,
-    "type_body_font": "assistant_n4",
+    "type_body_font": "poppins_n4",
     "body_scale": 100,
     "page_width": 1200,
     "spacing_sections": 0,
@@ -156,12 +156,12 @@
       },
       "scheme-2": {
         "settings": {
-          "background": "#f3f3f3",
+          "background": "#fcf4ee",
           "background_gradient": "",
-          "text": "#121212",
-          "button": "#121212",
-          "button_label": "#f3f3f3",
-          "secondary_button_label": "#121212",
+          "text": "#61402e",
+          "button": "#fcf4ee",
+          "button_label": "#61402e",
+          "secondary_button_label": "#61402e",
           "shadow": "#121212"
         }
       },
