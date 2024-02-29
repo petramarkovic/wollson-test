@@ -96,7 +96,7 @@
             <select name="id" id="ProductSelect-{{ product.id }}" class="product-form__variants">
               {% for variant in product.variants %}
                 {% if variant.available %}
-                  <option value="{{ variant.id }}">
+                  <option value="{{ variant.id }}" {% if option.selected_value == value %} selected="selected"{% endif %}>
                     {{ variant.title }}
                   </option>
                 {% endif %}
