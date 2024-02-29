@@ -22,7 +22,11 @@
     <div class="custom-product">
       {% if section.settings.product != blank %}
         <div class="custom-product__col">
-          {% render 'product-media-gallery', variant_images: variant_images %}
+          {% render 'product-media-gallery',
+            variant_images: variant_images,
+            is_duplicate: false,
+            product: section.settings.product
+          %}
         </div>
         <div class="custom-product__col">
           <h2 class="custom-product__title">{{ product.title }}</h2>
