@@ -43,7 +43,9 @@
             {% for variant in product.variants %}
               {% if variant.metafields.custom.included_product_1 != blank %}
                 <div class="custom-product__item">
-                  <span class="custom-product__item-icon"></span>
+                  <span class="custom-product__item-icon">
+                    {% render 'icon-check' %}
+                  </span>
                   <div class="custom-product__item-info">
                     <h4 class="custom-product__item-title">
                       1 X {{ variant.metafields.custom.included_product_1.value.title }}
@@ -57,7 +59,9 @@
 
               {% if variant.metafields.custom.included_product_2 != blank %}
                 <div class="custom-product__item">
-                  <span class="custom-product__item-icon"></span>
+                  <span class="custom-product__item-icon">
+                    {% render 'icon-check' %}
+                  </span>
                   <div class="custom-product__item-info">
                     <h4 class="custom-product__item-title">
                       1 X {{ variant.metafields.custom.included_product_2.value.title }}
@@ -71,7 +75,9 @@
 
               {% if variant.metafields.custom.included_product_3 != blank %}
                 <div class="custom-product__item">
-                  <span class="custom-product__item-icon"></span>
+                  <span class="custom-product__item-icon">
+                    {% render 'icon-check' %}
+                  </span>
                   <div class="custom-product__item-info">
                     <h4 class="custom-product__item-title">
                       1 X {{ variant.metafields.custom.included_product_3.value.title }}
