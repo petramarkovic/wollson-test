@@ -30,6 +30,7 @@
             {{ product.description }}
           </p>
           <div>
+            What’s inside:
             {% for variant in product.variants %}
               <h3>{{ variant.metafields.custom.included_product_1.value.title }}</h3>
               <h3>{{ variant.metafields.custom.included_product_2.value.title }}</h3>
