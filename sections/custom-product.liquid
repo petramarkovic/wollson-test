@@ -19,7 +19,7 @@
     <div class="custom-product">
       <div class="custom-product__col">
         {% if section.settings.product != blank %}
-          {% render 'product-media-gallery', variant_images: section.settings.product.images | where: 'attached_to_variant?', true | map: 'src' %}
+          {% render 'product-media-gallery', product: section.settings.product,  variant_images: section.settings.product.images | where: 'attached_to_variant?', true | map: 'src' %}
         {% endif %}
       </div>
       <div class="custom-product__col"></div>
