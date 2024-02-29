@@ -88,7 +88,7 @@
               {% if variant.available %}
                 <option>
                   {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %}
-                  {% assign featured_image = product.images.first | default: product.featured_image %}
+                  <!-- {% assign featured_image = product.images.first | default: product.featured_image %} -->
                 </option>
               {% else %}
                 <option disabled="disabled">{{ variant.title }} - {{ 'products.product.sold_out' | t }}</option>
