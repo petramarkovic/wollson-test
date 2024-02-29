@@ -14,12 +14,14 @@
   }
 {%- endstyle -%}
 
+{% assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' %}
+
 <div class="section-{{ section.id }}-padding color-{{ section.settings.section_color_scheme }}">
   <div class="page-width">
     <div class="custom-product">
       <div class="custom-product__col">
         {% if section.settings.product != blank %}
-          {% render 'product-media-gallery', product: section.settings.product,  variant_images: section.settings.product.images | where: 'attached_to_variant?', true | map: 'src' %}
+          {% render 'product-media-gallery', product: section.settings.product, variant_images: variant_images %}
         {% endif %}
       </div>
       <div class="custom-product__col"></div>
