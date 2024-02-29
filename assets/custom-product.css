@@ -32,6 +32,7 @@
 .custom-product__item {
   display: flex;
   gap: 12px;
+  margin-bottom: 8px;
 }
 
 .custom-product__item-icon {
