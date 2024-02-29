@@ -30,7 +30,9 @@
             {{ product.description }}
           </p>
           <div class="custom-product__items">
-            What’s inside:
+            {% if product.variants != blank %}
+              What’s inside:
+            {% endif %}
             {% for variant in product.variants %}
               {% if variant.metafields.custom.included_product_1 != blank %}
                 <div class="custom-product__item">
