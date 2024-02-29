@@ -31,7 +31,7 @@
           </p>
           <div>
             {% for variant in product.variants %}
-              <h3>{{ variant.metafields.custom.included_product_1 }}</h3>
+              <h3>{{ variant.metafields.custom.included_product_1.product.title }}</h3>
               <h3>{{ variant.metafields.custom.included_product_2 }}</h3>
               <h3>{{ variant.metafields.custom.included_product_3 }}</h3>
             {% endfor %}
