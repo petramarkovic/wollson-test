@@ -41,6 +41,9 @@
   width: 21px;
   height: 21px;
   flex: 0 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .custom-product__item-title {
