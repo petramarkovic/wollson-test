@@ -1,0 +1,10 @@
+.custom-product {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.custom-product__col {
+  flex: 1 1 calc(50% - 40px);
+  max-width: calc(50% - 40px);
+}
