@@ -16,7 +16,14 @@
 
 <div class="section-{{ section.id }}-padding color-{{ section.settings.section_color_scheme }}">
   <div class="page-width">
-	test for custom product
+	<div class="custom-product">
+		<div class="custom-product__col">
+			{% if section.settings.product != blank %}
+				{% render 'product-media-gallery', variant_images: variant_images %}
+			{% endif %}
+		</div>
+		<div class="custom-product__col"></div>
+	</div>
   </div>
 </div>
 
@@ -28,6 +35,11 @@
     "groups": ["header", "footer"]
   },
   "settings": [
+	{
+		"type": "product",
+		"id": "product",
+		"label": "Product"
+	},
     {
       "type": "color_scheme",
       "id": "section_color_scheme",
