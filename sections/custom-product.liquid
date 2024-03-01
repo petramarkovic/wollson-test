@@ -155,7 +155,7 @@
         "title": "{{ variant.metafields.custom.included_product_3.title }}",
         "description": "{{ variant.metafields.custom.included_product_3.description }}"
       }
-    }
+    }{% unless forloop.last %}, {% endunless %}
   {% endfor %}
   }
 </script>
