@@ -11,15 +11,15 @@ if (!customElements.get('custom-product-form')) {
 			this.minusBtn = this.querySelector('.minus');
 			this.plusBtn = this.querySelector('.plus');
 			this.quantityInput = this.querySelector('.quantity');
-
-          console.log(this.minusBtn, this.plusBtn, this.quantityInput)
-  
+			
+			this.quantityButtonsEvents();
 		}
   
 		onSubmitHandler(e) {
 		  e.preventDefault();
 		  if (this.submitButton.getAttribute('aria-disabled') === 'true') return;
   
+		//   this.handleErrorMessage();
   
 		  this.submitButton.setAttribute('aria-disabled', true);
   
@@ -41,9 +41,9 @@ if (!customElements.get('custom-product-form')) {
 		updateQuantity(change) {
 			let newValue = parseInt(quantityInput.value) + change;
 			if (newValue < 1) {
-			  newValue = 1;
+			  newValue = 1; // Ensure quantity doesn't go below 1
 			}
-			quantityInput.value = newValue;
+			this.quantityInput.value = newValue;
 		}
 	  }
 	);
