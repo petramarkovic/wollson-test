@@ -65,6 +65,10 @@
   margin: 0;
 }
 
+.custom-product__form-bottom {
+  display: flex;
+}
+
 .custom-product__form-btn {
   background-color: #F8C063;
   padding: 10px;
