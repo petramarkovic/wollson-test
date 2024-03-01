@@ -81,6 +81,8 @@
 
 .custom-product__form-bottom {
   display: flex;
+  gap: 16px;
+  justify-content: space-between;
 }
 
 .custom-product__form-quantity {
@@ -107,6 +109,10 @@
   font-family: 'Poppins', sans-serif;
   display: flex;
   align-items: center;
+}
+
+.custom-product__form-submit {
+  flex: 1 1 auto;
 }
 
 .custom-product__form-btn {
