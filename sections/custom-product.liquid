@@ -136,11 +136,11 @@
       {% endif %}
     </div>
   </div>
-  <script type="application/json">
-    {{ product.variants | json }}
-  </script>
 </div>
 
+<script id="variant-data" type="application/json">
+  {{ product.variants | json }}
+</script>
 <script src="{{ 'custom-product.js' | asset_url }}" defer="defer"></script>
 
 {% schema %}
