@@ -23,7 +23,7 @@ if (!customElements.get('custom-product-form')) {
 		}
   
 		onSubmitHandler(e) {
-		  // e.preventDefault();
+		  e.preventDefault();
 		  if (this.submitButton.getAttribute('aria-disabled') === 'true') return;
   
 		  this.submitButton.setAttribute('aria-disabled', true);
