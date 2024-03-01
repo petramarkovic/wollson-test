@@ -87,7 +87,7 @@
           </div>
 
           <custom-product-form>
-            {% form 'product', product_variant %}
+            {% form 'product', product %}
               <div class="custom-product__form-content">
                 {%- if product.variants.size > 1 -%}
                   {% for variant in product.variants %}
