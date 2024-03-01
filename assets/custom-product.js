@@ -59,7 +59,7 @@ if (!customElements.get('custom-product-form')) {
           console.log(event.target.value);
         }
 
-        selecEvents() {
+        selectEvents() {
           this.select.addEventListener('change', this.onVariantChange);
         }
 	  }
