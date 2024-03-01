@@ -30,7 +30,7 @@ if (!customElements.get('custom-product-form')) {
   
 		  // const formData = new FormData(this.form);
           let formData = {};
-          const serializedForm = JSON.stringify(this.form);
+          const serializedForm = JSON.parse(this.form);
 
           serializedForm.forEach((element) => {
 			if (!element?.name || !element?.value) return;
