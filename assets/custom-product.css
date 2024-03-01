@@ -74,6 +74,10 @@
   border: 1px solid #61402E;
 }
 
+.custom-product__form-quantity .quantity {
+  border: none;
+}
+
 .custom-product__form-quantity button {
   border: none;
   background: transparent;
