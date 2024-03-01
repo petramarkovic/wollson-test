@@ -71,6 +71,12 @@
 
 .custom-product__form-quantity {
   display: flex;
+  border: 1px solid #61402E;
+}
+
+.custom-product__form-quantity btn {
+  border: none;
+  background: transparent;
 }
 
 .custom-product__form-btn {
