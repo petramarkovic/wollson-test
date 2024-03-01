@@ -56,10 +56,11 @@ if (!customElements.get('custom-product-form')) {
 
         selectEvents() {
           const options = this.select.querySelectorAll('option');
-          console.log(options);
+          // console.log(options);
           this.select.addEventListener('change', (event) => {
-            console.log(this.data);
-            console.log(event.target.value);
+            // console.log(this.data);
+            // console.log(event.target.value);
+            console.log(this.data[event.target.value]);
           });
         }
 	  }
