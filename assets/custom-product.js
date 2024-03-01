@@ -11,8 +11,10 @@ if (!customElements.get('custom-product-form')) {
 			this.minusBtn = this.querySelector('.minus');
 			this.plusBtn = this.querySelector('.plus');
 			this.quantityInput = this.querySelector('.quantity');
+            this.select = this.querySelector('.custom-product__form-variants');
 			
 			this.quantityButtonsEvents();
+            this.select.addEventListener('change', this.onVariantChange);
 		}
   
 		onSubmitHandler(e) {
@@ -41,10 +43,20 @@ if (!customElements.get('custom-product-form')) {
 		updateQuantity(change) {
 			let newValue = parseInt(this.quantityInput.value) + change;
 			if (newValue < 1) {
-			  newValue = 1; // Ensure quantity doesn't go below 1
+			  newValue = 1;
 			}
 			this.quantityInput.value = newValue;
 		}
+
+        onVariantChange() {
+          const selectedOption = this.select.options[this.select.selectedIndex];
+          const variantId = selectedOption.value;
+          const variantTitle = selectedOption.text;
+  
+          this.querySelector('input[name="id"]').value = variantId;
+  
+          this.quantityInput.value = '1';
+        }
 	  }
 	);
   }
