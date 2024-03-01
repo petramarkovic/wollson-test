@@ -15,10 +15,10 @@ if (!customElements.get('custom-product-form')) {
             this.variantDetails = this.querySelector('.variant-details');
 			
 			this.quantityButtonsEvents();
+            this.selectEvents();
 
             this.data = JSON.parse(document.querySelector('#variant-data').textContent);
 
-          console.log(this.data);
 		}
   
 		onSubmitHandler(e) {
@@ -55,10 +55,11 @@ if (!customElements.get('custom-product-form')) {
 		}
 
         onVariantChange(event) {
-          if (!this.select) {
-            return;
-          }
-           this.select.addEventListener('change', this.onVariantChange);
+          console.log(this.data);
+        }
+
+        selecEvents() {
+          this.select.addEventListener('change', this.onVariantChange);
         }
 	  }
 	);
