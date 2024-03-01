@@ -97,6 +97,7 @@
   color: #61402E;
   font-family: 'Poppins', sans-serif;
   width: 100%;
+  text-align: center;
 }
 
 .custom-product__form-quantity button {
@@ -104,6 +105,8 @@
   background: transparent;
   color: #61402E;
   font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: center;
 }
 
 .custom-product__form-btn {
