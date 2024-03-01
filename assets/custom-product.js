@@ -52,10 +52,6 @@ if (!customElements.get('custom-product-form')) {
           const selectedOption = event.target.options[event.target.selectedIndex];
           const variantId = selectedOption.value;
           const variantTitle = selectedOption.text;
-  
-          this.querySelector('input[name="id"]').value = variantId;
-  
-          this.quantityInput.value = '1';
         }
 	  }
 	);
