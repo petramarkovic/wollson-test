@@ -12,9 +12,14 @@ if (!customElements.get('custom-product-form')) {
 			this.plusBtn = this.querySelector('.plus');
 			this.quantityInput = this.querySelector('.quantity');
             this.select = this.querySelector('.custom-product__form-variants');
+            this.variantDetails = this.querySelector('.variant-details');
 			
 			this.quantityButtonsEvents();
             this.select.addEventListener('change', this.onVariantChange);
+
+            this.data = JSON.parse(document.querySelector('#variant-data').textContent)
+
+          console.log(this.data);
 		}
   
 		onSubmitHandler(e) {
