@@ -11,6 +11,8 @@ if (!customElements.get('custom-product-form')) {
 			this.minusBtn = this.querySelector('.minus');
 			this.plusBtn = this.querySelector('.plus');
 			this.quantityInput = this.querySelector('.quantity');
+
+          console.log('test')
   
 		}
   
