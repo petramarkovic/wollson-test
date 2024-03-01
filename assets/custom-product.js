@@ -71,7 +71,21 @@ if (!customElements.get('custom-product-form')) {
         }
 
         loadMetafields() {
-          console.log(this.select.options[0])
+          if (!this.select) {
+            return;
+          } else {
+            const activeId = this.select.options[0].value;
+            const items = document.querySelectorAll('.custom-product__item');
+            items.forEach(item => {
+              const id = item.getAttribute('data-id');
+              if (id === activeId) {
+                item.style.display = 'none';
+              } else {
+                item.style.display = 'block';
+              }
+            })
+          console.log(this.select.options[0].value;)
+          }
         }
 	  }
 	);
