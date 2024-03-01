@@ -36,55 +36,55 @@
             {% if product.metafields.custom.bundle == true %}
               <h3>What’s inside:</h3>
             {% endif %}
-
-              {% if selectedProduct.metafields.custom.included_product_1 != blank %}
+              {% for variant in product.variants %}
+              {% if variant.metafields.custom.included_product_1 != blank %}
                 <div class="custom-product__item js-custom-product-item-1">
                   <div class="custom-product__item-icon">
                     {% render 'icon-check' %}
                   </div>
                   <div class="custom-product__item-info">
                     <h4 class="custom-product__item-title">
-                      1 X {{ selectedProduct.metafields.custom.included_product_1.value.title }}
+                      1 X {{ variant.metafields.custom.included_product_1.value.title }}
                     </h4>
                     <p class="custom-product__item-description">
-                      {{ selectedProduct.metafields.custom.included_product_1.value.description }}
+                      {{ variant.metafields.custom.included_product_1.value.description }}
                     </p>
                   </div>
                 </div>
               {% endif %}
 
-              {% if selectedProduct.metafields.custom.included_product_2 != blank %}
+              {% if variant.metafields.custom.included_product_2 != blank %}
                 <div class="custom-product__item js-custom-product-item-2">
                   <div class="custom-product__item-icon">
                     {% render 'icon-check' %}
                   </div>
                   <div class="custom-product__item-info">
                     <h4 class="custom-product__item-title">
-                      1 X {{ selectedProduct.metafields.custom.included_product_2.value.title }}
+                      1 X {{ variant.metafields.custom.included_product_2.value.title }}
                     </h4>
                     <p class="custom-product__item-description">
-                      {{ selectedProduct.metafields.custom.included_product_2.value.description }}
+                      {{ variant.metafields.custom.included_product_2.value.description }}
                     </p>
                   </div>
                 </div>
               {% endif %}
 
-              {% if selectedProduct.metafields.custom.included_product_3 != blank %}
+              {% if variant.metafields.custom.included_product_3 != blank %}
                 <div class="custom-product__item js-custom-product-item-3">
                   <div class="custom-product__item-icon">
                     {% render 'icon-check' %}
                   </div>
                   <div class="custom-product__item-info">
                     <h4 class="custom-product__item-title">
-                      1 X {{ selectedProduct.metafields.custom.included_product_3.value.title }}
+                      1 X {{ variant.metafields.custom.included_product_3.value.title }}
                     </h4>
                     <p class="custom-product__item-description">
-                      {{ selectedProduct.metafields.custom.included_product_3.value.description }}
+                      {{ variant.metafields.custom.included_product_3.value.description }}
                     </p>
                   </div>
                 </div>
               {% endif %}
-
+            {% endfor %}
           </div>
 
           <custom-product-form>
