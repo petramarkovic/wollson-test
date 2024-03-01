@@ -97,7 +97,7 @@
                 {% for variant in product.variants %}
                   {% if variant.available %}
                     <option
-                      value="{{ variant.title | escape }}"
+                      value="{{ variant.id }}"
                       {% if variant == product.selected_or_first_available_variant %}
                         selected="selected"
                       {% endif %}
@@ -108,17 +108,6 @@
                 {% endfor %}
               </select>
             {%- endif -%}
-
-            {% for option in product.options -%}
-              <label>
-                Style
-                <select>
-                  {%- for value in product.options_by_name.style.values %}
-                    <option>{{ value }}</option>
-                  {%- endfor %}
-                </select>
-              </label>
-            {%- endfor %}
 
             <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
             {{ form | payment_terms }}
