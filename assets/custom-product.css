@@ -64,3 +64,12 @@
   line-height: 21px;
   margin: 0;
 }
+
+.custom-product__form-btn {
+  background-color: #F8C063;
+  padding: 10px;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
