@@ -139,7 +139,25 @@
 </div>
 
 <script id="variant-data" type="application/json">
-  {{ product.variants | json }}
+  {
+  {% for variant in product.variants %}
+    "{{ variant.id }}": {
+      "featuredImage": "{{ variant.featured_image.src }}",
+      "customProduct1": {
+        "title": "{{ variant.metafields.custom.included_product_1.title }}",
+        "description": "{{ variant.metafields.custom.included_product_1.description }}"
+      },
+      "customProduct2": {
+        "title": "{{ variant.metafields.custom.included_product_2.title }}",
+        "description": "{{ variant.metafields.custom.included_product_2.description }}"
+      },
+      "customProduct3": {
+        "title": "{{ variant.metafields.custom.included_product_3.title }}",
+        "description": "{{ variant.metafields.custom.included_product_3.description }}"
+      }
+    }
+  {% endfor %}
+  }
 </script>
 <script src="{{ 'custom-product.js' | asset_url }}" defer="defer"></script>
 
