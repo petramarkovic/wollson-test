@@ -36,7 +36,7 @@
             {% if product.metafields.custom.bundle == true %}
               <h3>What’s inside:</h3>
             {% endif %}
-            <!-- {% for variant in product.variants %} -->
+
               {% if selectedProduct.metafields.custom.included_product_1 != blank %}
                 <div class="custom-product__item">
                   <div class="custom-product__item-icon">
@@ -84,7 +84,7 @@
                   </div>
                 </div>
               {% endif %}
-            <!-- {% endfor %} -->
+
           </div>
 
           <custom-product-form>
