@@ -16,6 +16,7 @@ if (!customElements.get('custom-product-form')) {
 			
 			this.quantityButtonsEvents();
             this.selectEvents();
+            this.loadMetafields();
 
             this.data = JSON.parse(document.querySelector('#variant-data').textContent);
 
