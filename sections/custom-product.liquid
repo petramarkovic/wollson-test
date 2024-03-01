@@ -144,16 +144,16 @@
     "{{ variant.id }}": {
       "featuredImage": "{{ variant.featured_image.src }}",
       "customProduct1": {
-        "title": "{{ variant.metafields.custom.included_product_1.title }}",
-        "description": "{{ variant.metafields.custom.included_product_1.description }}"
+        "title": "{{ variant.metafields.custom.included_product_1.value.title }}",
+        "description": "{{ variant.metafields.custom.included_product_1.value.description }}"
       },
       "customProduct2": {
-        "title": "{{ variant.metafields.custom.included_product_2.title }}",
-        "description": "{{ variant.metafields.custom.included_product_2.description }}"
+        "title": "{{ variant.metafields.custom.included_product_2.value.title }}",
+        "description": "{{ variant.metafields.custom.included_product_2.value.description }}"
       },
       "customProduct3": {
-        "title": "{{ variant.metafields.custom.included_product_3.title }}",
-        "description": "{{ variant.metafields.custom.included_product_3.description }}"
+        "title": "{{ variant.metafields.custom.included_product_3.value.title }}",
+        "description": "{{ variant.metafields.custom.included_product_3.value.description }}"
       }
     }{% unless forloop.last %}, {% endunless %}
   {% endfor %}
