@@ -55,15 +55,6 @@ if (!customElements.get('custom-product-form')) {
 		}
 
         selectEvents() {
-          const item1 = document.querySelector('.js-custom-product-item-1');
-          const item1Title = item1.querySelector('.custom-product__item-title');
-          const item1Description = item1.querySelector('.custom-product__item-description');
-          const item2 = document.querySelector('.js-custom-product-item-2');
-          const item2Title = item2.querySelector('.custom-product__item-title');
-          const item2Description = item2.querySelector('.custom-product__item-description');
-          const item3 = document.querySelector('.js-custom-product-item-3');
-          const item3Title = item3.querySelector('.custom-product__item-title');
-          const item3Description = item3.querySelector('.custom-product__item-description');
           
           this.select.addEventListener('change', (event) => {
 
@@ -72,13 +63,6 @@ if (!customElements.get('custom-product-form')) {
             const selectedIndex = event.target.selectedIndex;
             const selectedOption = event.target.options[selectedIndex];
             const variantData = this.data[event.target.value];
-
-            item1Title.textContent = variantData.customProduct1.title;
-            item1Description.textContent = variantData.customProduct1.description;
-            item2Title.textContent = variantData.customProduct2.title;
-            item2Description.textContent = variantData.customProduct2.description;
-            item3Title.textContent = variantData.customProduct3.title;
-            item3Description.textContent = variantData.customProduct3.description;
             
             console.log(selectedOption.value);
             console.log(selectedOption.textContent);
