@@ -32,13 +32,12 @@
           </p>
 
           <div class="custom-product__items">
-            <div class="variant-details"></div>
+            {% for variant in product.variants %}
             {% if product.metafields.custom.bundle == true %}
               <h3>What’s inside:</h3>
             {% endif %}
-              {% for variant in product.variants %}
               {% if variant.metafields.custom.included_product_1 != blank %}
-                <div class="custom-product__item js-custom-product-item-1">
+                <div class="custom-product__item" data-id="{{ variant.id }}">
                   <div class="custom-product__item-icon">
                     {% render 'icon-check' %}
                   </div>
@@ -54,7 +53,7 @@
               {% endif %}
 
               {% if variant.metafields.custom.included_product_2 != blank %}
-                <div class="custom-product__item js-custom-product-item-2">
+                <div class="custom-product__item" data-id="{{ variant.id }}">
                   <div class="custom-product__item-icon">
                     {% render 'icon-check' %}
                   </div>
@@ -70,7 +69,7 @@
               {% endif %}
 
               {% if variant.metafields.custom.included_product_3 != blank %}
-                <div class="custom-product__item js-custom-product-item-3">
+                <div class="custom-product__item" data-id="{{ variant.id }}">
                   <div class="custom-product__item-icon">
                     {% render 'icon-check' %}
                   </div>
