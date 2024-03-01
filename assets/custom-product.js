@@ -28,7 +28,15 @@ if (!customElements.get('custom-product-form')) {
   
 		  this.submitButton.setAttribute('aria-disabled', true);
   
-		  const formData = new FormData(this.form);
+		  // const formData = new FormData(this.form);
+          let formData = {};
+          const serializedForm = this.form.serializeArray();
+
+          serializedForm.forEach((element) => {
+			if (!element?.name || !element?.value) return;
+
+			formData = { ...formData, [element.name]: element.value };
+    	  });
 		  console.log(formData);
   
 		}
