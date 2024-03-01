@@ -84,7 +84,7 @@ if (!customElements.get('custom-product-form')) {
                 item.style.display = 'block';
               }
             })
-          console.log(this.select.options[0].value;)
+          console.log(this.select.options[0].value);
           }
         }
 	  }
