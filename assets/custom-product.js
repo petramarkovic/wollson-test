@@ -55,22 +55,13 @@ if (!customElements.get('custom-product-form')) {
 		}
 
         selectEvents() {
-          const options = this.select.querySelectorAll('option');
-          // console.log(options);
           this.select.addEventListener('change', (event) => {
-            // console.log(this.data);
-            // console.log(event.target.value);
+
             console.log(this.data[event.target.value]);
-            // options.forEach(option => {
-            //   option.removeAttribute('selected');
-            //   if (option.getAttribute('value') === event.target.value) {
-            //     console.log('option selected');
-            //     option.setAttribute('selected', 'selected');
-            //   }
-            // })
+
             const selectedIndex = event.target.selectedIndex;
             const selectedOption = event.target.options[selectedIndex];
-            console.log(selectedOption.value); // This should give you the value of the selected option
+            console.log(selectedOption.value);
             console.log(selectedOption.textContent);
           });
         }
