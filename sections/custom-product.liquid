@@ -32,10 +32,10 @@
           </p>
 
           <div class="custom-product__items">
-            {% for variant in product.variants %}
             {% if product.metafields.custom.bundle == true %}
               <h3>What’s inside:</h3>
             {% endif %}
+            {% for variant in product.variants %}
               {% if variant.metafields.custom.included_product_1 != blank %}
                 <div class="custom-product__item" data-id="{{ variant.id }}">
                   <div class="custom-product__item-icon">
