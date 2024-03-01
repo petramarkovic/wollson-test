@@ -18,10 +18,8 @@ if (!customElements.get('custom-product-form')) {
 		}
   
 		onSubmitHandler(e) {
-		  // e.preventDefault();
+		  e.preventDefault();
 		  if (this.submitButton.getAttribute('aria-disabled') === 'true') return;
-  
-		//   this.handleErrorMessage();
   
 		  this.submitButton.setAttribute('aria-disabled', true);
   
@@ -42,10 +40,14 @@ if (!customElements.get('custom-product-form')) {
   
 		updateQuantity(change) {
 			let newValue = parseInt(this.quantityInput.value) + change;
-			if (newValue < 1) {
-			  newValue = 1;
-			}
-			this.quantityInput.value = newValue;
+            if (newValue < 1) {
+                newValue = 1;
+            }
+          
+            if (newValue < 10) {
+                newValue = '0' + newValue;
+            }
+            this.quantityInput.value = newValue;
 		}
 
         onVariantChange(event) {
