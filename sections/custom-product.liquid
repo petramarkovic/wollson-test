@@ -113,10 +113,17 @@
             <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
             {{ form | payment_terms }}
 
-            <button type="submit">
-              ADD TO CART - {{ product.selected_or_first_available_variant.compare_at_price | money_with_currency }}
-              {{ product.selected_or_first_available_variant.price | money_with_currency }}
-            </button>
+            <div class="custom-product__form-submit">
+              <div class="custom-product__form-quantity">
+                <button class="minus">-</button>
+                <input type="text" class="quantity" value="1">
+                <button class="plus">+</button>
+              </div>
+              <button type="submit">
+                ADD TO CART - {{ product.selected_or_first_available_variant.compare_at_price | money_with_currency }}
+                {{ product.selected_or_first_available_variant.price | money_with_currency }}
+              </button>
+            </div>
           {% endform %}
         </div>
       {% endif %}
