@@ -17,7 +17,7 @@ if (!customElements.get('custom-product-form')) {
 			this.quantityButtonsEvents();
             this.select.addEventListener('change', this.onVariantChange);
 
-            this.data = JSON.parse(document.querySelector('#variant-data').textContent)
+            this.data = JSON.parse(document.querySelector('#variant-data').textContent);
 
           console.log(this.data);
 		}
