@@ -67,6 +67,16 @@ if (!customElements.get('custom-product-form')) {
             
             console.log(selectedOption.value);
             console.log(selectedOption.textContent);
+
+            const items = document.querySelectorAll('.custom-product__item');
+            items.forEach(item => {
+              const id = item.getAttribute('data-id');
+              if (id === selectedOption.value) {
+                item.style.display = 'none';
+              } else {
+                item.style.display = 'flex';
+              }
+            })
           });
         }
 
@@ -84,7 +94,6 @@ if (!customElements.get('custom-product-form')) {
                 item.style.display = 'flex';
               }
             })
-          console.log(this.select.options[0].value);
           }
         }
 	  }
