@@ -39,7 +39,7 @@ if (!customElements.get('custom-product-form')) {
 		}
   
 		updateQuantity(change) {
-			let newValue = parseInt(quantityInput.value) + change;
+			let newValue = parseInt(this.quantityInput.value) + change;
 			if (newValue < 1) {
 			  newValue = 1; // Ensure quantity doesn't go below 1
 			}
