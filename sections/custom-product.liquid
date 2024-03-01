@@ -92,39 +92,41 @@
             {% endfor %}
           </div>
 
-          {% form 'product', product %}
-            {%- if product.variants.size > 0 -%}
-              <select name="id" id="ProductSelect-{{ product.id }}" class="custom-product__form-variants">
-                {% for variant in product.variants %}
-                  {% if variant.available %}
-                    <option
-                      value="{{ variant.id }}"
-                      {% if variant == product.selected_or_first_available_variant %}
-                        selected="selected"
-                      {% endif %}
-                    >
-                      {{ variant.title }}
-                    </option>
-                  {% endif %}
-                {% endfor %}
-              </select>
-            {%- endif -%}
+          <custom-product-form>
+            {% form 'product', product %}
+              {%- if product.variants.size > 0 -%}
+                <select name="id" id="ProductSelect-{{ product.id }}" class="custom-product__form-variants">
+                  {% for variant in product.variants %}
+                    {% if variant.available %}
+                      <option
+                        value="{{ variant.id }}"
+                        {% if variant == product.selected_or_first_available_variant %}
+                          selected="selected"
+                        {% endif %}
+                      >
+                        {{ variant.title }}
+                      </option>
+                    {% endif %}
+                  {% endfor %}
+                </select>
+              {%- endif -%}
 
-            <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
-            {{ form | payment_terms }}
+              <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+              {{ form | payment_terms }}
 
-            <div class="custom-product__form-submit">
-              <div class="custom-product__form-quantity">
-                <button type="button" class="minus">-</button>
-                <input type="text" class="quantity" value="1">
-                <button type="button" class="plus">+</button>
+              <div class="custom-product__form-submit">
+                <div class="custom-product__form-quantity">
+                  <button type="button" class="minus">-</button>
+                  <input type="text" class="quantity" value="1">
+                  <button type="button" class="plus">+</button>
+                </div>
+                <button type="submit">
+                  ADD TO CART - {{ product.selected_or_first_available_variant.compare_at_price | money_with_currency }}
+                  {{ product.selected_or_first_available_variant.price | money_with_currency }}
+                </button>
               </div>
-              <button type="submit">
-                ADD TO CART - {{ product.selected_or_first_available_variant.compare_at_price | money_with_currency }}
-                {{ product.selected_or_first_available_variant.price | money_with_currency }}
-              </button>
-            </div>
-          {% endform %}
+            {% endform %}
+          </custom-product-form>
         </div>
       {% endif %}
     </div>
