@@ -76,6 +76,7 @@
 
 .custom-product__form-quantity .quantity {
   border: none;
+  background: none;
 }
 
 .custom-product__form-quantity button {
