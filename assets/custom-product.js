@@ -54,13 +54,11 @@ if (!customElements.get('custom-product-form')) {
             this.quantityInput.value = newValue;
 		}
 
-        onVariantChange(event) {
-          console.log(this.data);
-          console.log(event.target.value);
-        }
-
         selectEvents() {
-          this.select.addEventListener('change', this.onVariantChange);
+          this.select.addEventListener('change', (event) => {
+            console.log(this.data);
+            console.log(event.target.value);
+          });
         }
 	  }
 	);
