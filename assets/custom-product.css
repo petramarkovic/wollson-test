@@ -80,12 +80,14 @@
   font-size: 16px;
   line-height: 24px;
   color: #61402E;
+  font-family: 'Poppins', sans-serif;
 }
 
 .custom-product__form-quantity button {
   border: none;
   background: transparent;
   color: #61402E;
+  font-family: 'Poppins', sans-serif;
 }
 
 .custom-product__form-btn {
