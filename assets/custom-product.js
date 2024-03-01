@@ -61,13 +61,17 @@ if (!customElements.get('custom-product-form')) {
             // console.log(this.data);
             // console.log(event.target.value);
             console.log(this.data[event.target.value]);
-            options.forEach(option => {
-              option.removeAttribute('selected');
-              if (option.getAttribute('value') === event.target.value) {
-                console.log('option selected');
-                option.setAttribute('selected', 'selected');
-              }
-            })
+            // options.forEach(option => {
+            //   option.removeAttribute('selected');
+            //   if (option.getAttribute('value') === event.target.value) {
+            //     console.log('option selected');
+            //     option.setAttribute('selected', 'selected');
+            //   }
+            // })
+            const selectedIndex = event.target.selectedIndex;
+            const selectedOption = event.target.options[selectedIndex];
+            console.log(selectedOption.value); // This should give you the value of the selected option
+            console.log(selectedOption.textContent);
           });
         }
 	  }
