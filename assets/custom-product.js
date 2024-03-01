@@ -71,7 +71,7 @@ if (!customElements.get('custom-product-form')) {
         }
 
         loadMetafields() {
-          console.log(this.select.options.getAttribute('value'))
+          console.log(this.select.options[0])
         }
 	  }
 	);
