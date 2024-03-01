@@ -73,12 +73,12 @@ if (!customElements.get('custom-product-form')) {
             const selectedOption = event.target.options[selectedIndex];
             const variantData = this.data[event.target.value];
 
-            item1Title.textContent = variantData.title;
-            item1Description.textContent = variantData.description;
-            item2Title.textContent = variantData.title;
-            item2Description.textContent = variantData.description;
-            item3Title.textContent = variantData.title;
-            item3Description.textContent = variantData.description;
+            item1Title.textContent = variantData.customProduct1.title;
+            item1Description.textContent = variantData.customProduct1.description;
+            item2Title.textContent = variantData.customProduct2.title;
+            item2Description.textContent = variantData.customProduct2.description;
+            item3Title.textContent = variantData.customProduct3.title;
+            item3Description.textContent = variantData.customProduct3.description;
             
             console.log(selectedOption.value);
             console.log(selectedOption.textContent);
