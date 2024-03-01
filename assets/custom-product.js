@@ -56,6 +56,7 @@ if (!customElements.get('custom-product-form')) {
 
         onVariantChange(event) {
           console.log(this.data);
+          console.log(event.target.value);
         }
 
         selecEvents() {
