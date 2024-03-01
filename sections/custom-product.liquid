@@ -115,9 +115,9 @@
 
             <div class="custom-product__form-submit">
               <div class="custom-product__form-quantity">
-                <button class="minus">-</button>
+                <button type="button" class="minus">-</button>
                 <input type="text" class="quantity" value="1">
-                <button class="plus">+</button>
+                <button type="button" class="plus">+</button>
               </div>
               <button type="submit">
                 ADD TO CART - {{ product.selected_or_first_available_variant.compare_at_price | money_with_currency }}
