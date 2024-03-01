@@ -36,6 +36,7 @@
   line-height: 20.8px;
   font-weight: 500;
   margin-bottom: 8px;
+  letter-spacing: 0;
 }
 
 .custom-product__item {
@@ -66,12 +67,16 @@
   line-height: 24px;
   font-weight: 500;
   text-transform: uppercase;
+  letter-spacing: 0;
+  margin-bottom: -3px;
 }
 
 .custom-product__item-description {
   font-size: 14px;
   line-height: 21px;
   margin: 0;
+  letter-spacing: -0.07em !important;
+  margin-bottom: 0 !important;
 }
 
 .custom-product__form-bottom {
