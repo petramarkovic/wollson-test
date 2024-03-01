@@ -68,6 +68,10 @@ if (!customElements.get('custom-product-form')) {
             console.log(selectedOption.textContent);
           });
         }
+
+        loadMetafields() {
+          console.log(this.select)
+        }
 	  }
 	);
   }
