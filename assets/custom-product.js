@@ -64,7 +64,8 @@ if (!customElements.get('custom-product-form')) {
             options.forEach(option => {
               option.removeAttribute('selected');
               if (option.getAttribute('value') === event.target.value) {
-                console.log('option selected')
+                console.log('option selected');
+                option.setAttribute('selected', 'selected');
               }
             })
           });
