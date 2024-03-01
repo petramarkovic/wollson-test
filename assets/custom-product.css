@@ -104,6 +104,8 @@
   background: transparent;
   color: #61402E;
   font-family: 'Poppins', sans-serif;
+  font-size: 38px;
+  line-height: 20px;
 }
 
 .custom-product__form-btn {
