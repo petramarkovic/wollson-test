@@ -49,9 +49,7 @@ if (!customElements.get('custom-product-form')) {
 		}
 
         onVariantChange(event) {
-          const selectedOption = event.target.options[event.target.selectedIndex];
-          const variantId = selectedOption.value;
-          const variantTitle = selectedOption.text;
+          console.log(event.target);
         }
 	  }
 	);
