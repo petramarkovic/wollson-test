@@ -48,8 +48,8 @@ if (!customElements.get('custom-product-form')) {
 			this.quantityInput.value = newValue;
 		}
 
-        onVariantChange() {
-          const selectedOption = this.select.options[this.select.selectedIndex];
+        onVariantChange(event) {
+          const selectedOption = event.target.options[event.target.selectedIndex];
           const variantId = selectedOption.value;
           const variantTitle = selectedOption.text;
   
