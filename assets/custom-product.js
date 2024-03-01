@@ -49,7 +49,7 @@ if (!customElements.get('custom-product-form')) {
 		}
 
         onVariantChange(event) {
-           console.log(this.select.value);
+           console.log(event.target.value);
         }
 	  }
 	);
