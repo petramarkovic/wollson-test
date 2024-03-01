@@ -90,7 +90,7 @@
           <custom-product-form>
             {% form 'product', product %}
               <div class="custom-product__form-content">
-                {%- if product.variants.size > 0 -%}
+                {%- if product.options.size > 0 -%}
                   <select name="id" id="ProductSelect-{{ product.id }}" class="custom-product__form-variants">
                     {% for variant in product.variants %}
                       {% if variant.available %}
