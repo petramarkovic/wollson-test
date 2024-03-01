@@ -11,7 +11,7 @@ if (!customElements.get('custom-product-form')) {
 			this.minusBtn = this.querySelector('.minus');
 			this.plusBtn = this.querySelector('.plus');
 			this.quantityInput = this.querySelector('.quantity');
-            this.select = this.querySelector('.custom-product__form-variants');
+            this.select = this.querySelector('.custom-product__variant input[type="radio"]');
             this.variantDetails = this.querySelector('.variant-details');
 			
 			this.quantityButtonsEvents();
@@ -57,44 +57,39 @@ if (!customElements.get('custom-product-form')) {
 
         selectEvents() {
           
-          this.select.addEventListener('change', (event) => {
-
-            console.log(this.data[event.target.value]);
-
-            const selectedIndex = event.target.selectedIndex;
-            const selectedOption = event.target.options[selectedIndex];
-            const variantData = this.data[event.target.value];
-            
-            console.log(selectedOption.value);
-            console.log(selectedOption.textContent);
-
-            const items = document.querySelectorAll('.custom-product__item');
-            items.forEach(item => {
-              const id = item.getAttribute('data-id');
-              if (id === selectedOption.value) {
-                item.style.display = 'none';
-              } else {
-                item.style.display = 'flex';
-              }
-            })
+          this.select.forEach(input => {
+              input.addEventListener('change', (event) => {
+                  const selectedOptionValue = event.target.value;
+                  const items = document.querySelectorAll('.custom-product__item');
+      
+                  items.forEach(item => {
+                      const id = item.getAttribute('data-id');
+                      if (id === selectedOptionValue) {
+                          item.style.display = 'none';
+                      } else {
+                          item.style.display = 'flex';
+                      }
+                  });
+              });
           });
         }
 
         loadMetafields() {
-          if (!this.select) {
-            return;
-          } else {
-            const activeId = this.select.options[0].value;
-            const items = document.querySelectorAll('.custom-product__item');
-            items.forEach(item => {
+          if (!this.select || this.select.length === 0) {
+              return;
+          }
+      
+          const activeId = this.select[0].value;
+          const items = document.querySelectorAll('.custom-product__item');
+      
+          items.forEach(item => {
               const id = item.getAttribute('data-id');
               if (id === activeId) {
-                item.style.display = 'none';
+                  item.style.display = 'none';
               } else {
-                item.style.display = 'flex';
+                  item.style.display = 'flex';
               }
-            })
-          }
+          });
         }
 	  }
 	);

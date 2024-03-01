@@ -90,21 +90,19 @@
             {% form 'product', product %}
               <div class="custom-product__form-content">
                 {%- if product.variants.size > 1 -%}
-                  <select name="id" id="ProductSelect-{{ product.id }}" class="custom-product__form-variants">
-                    {% for variant in product.variants %}
-                      {% if variant.available %}
-                        <option
-                          value="{{ variant.id }}"
-                          {% if variant == product.selected_or_first_available_variant %}
-                            selected="selected"
-                          {% endif %}
-                        >
-                          {{ variant.title }}
-                        </option>
-                      {% endif %}
-                    {% endfor %}
-                  </select>
+                  {% for variant in product.variants %}
+                    {% if variant.available %}
+                      <div class="custom-product__variant">
+                        <input type="radio" id="variant-{{ variant.id }}" name="variant" value="{{ variant.id }}"
+                               {% if variant == product.selected_or_first_available_variant %}
+                                 checked="checked"
+                               {% endif %}>
+                        <label for="variant-{{ variant.id }}">{{ variant.title }}</label>
+                      </div>
+                    {% endif %}
+                  {% endfor %}
                 {%- endif -%}
+
 
                 <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
                 {{ form | payment_terms }}
