@@ -30,11 +30,11 @@ if (!customElements.get('custom-product-form')) {
 
 		quantityButtonsEvents() {
 			this.minusBtn.addEventListener('click', () => {
-				updateQuantity(-1);
+				this.updateQuantity(-1);
 			});
 		   
 			this.plusBtn.addEventListener('click', () => {
-				updateQuantity(1);
+				this.updateQuantity(1);
 			});
 		}
   
