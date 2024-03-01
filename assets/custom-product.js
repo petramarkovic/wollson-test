@@ -29,14 +29,15 @@ if (!customElements.get('custom-product-form')) {
 		  this.submitButton.setAttribute('aria-disabled', true);
   
 		  // const formData = new FormData(this.form);
-          let formData = {};
-          const serializedForm = JSON.parse(this.form);
-
-          serializedForm.forEach((element) => {
-			if (!element?.name || !element?.value) return;
-
-			formData = { ...formData, [element.name]: element.value };
-    	  });
+          const formData = {};
+          const formElements = this.form.elements;
+      
+          for (let i = 0; i < formElements.length; i++) {
+              const element = formElements[i];
+              if (element.name) {
+                  formData[element.name] = element.value;
+              }
+          }
 		  console.log(formData);
   
 		}
