@@ -16,7 +16,7 @@
 
 {% assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' %}
 {% assign product = section.settings.product %}
-{% assign selectedProduct = product.variants[0] %}
+{% assign selectedProduct = product.variants.first %}
 
 <div class="section-{{ section.id }}-padding color-{{ section.settings.section_color_scheme }}">
   <div class="page-width">
