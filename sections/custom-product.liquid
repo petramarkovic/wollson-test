@@ -93,29 +93,33 @@
 
           {% form 'product', product %}
             {%- if product.variants.size > 0 -%}
-            <select name="id" id="ProductSelect-{{ product.id }}" class="product-form__variants">
-              {% for option in product.options_with_values %}
-                {% if option.available %}
-                  <option value="{{ option.value | escape }}" {% if option.selected_value == option.value %} selected="selected" {% endif %}>
-                     {{- option.name -}}
-                  </option>
-                {% endif %}
-              {% endfor %}
-            </select>
-          {%- endif -%}
+              <select name="id" id="ProductSelect-{{ product.id }}" class="product-form__variants">
+                {% for variant in product.variants %}
+                  {% if variant.available %}
+                    <option
+                      value="{{ variant.title | escape }}"
+                      {% if variant == product.selected_or_first_available_variant %}
+                        selected="selected"
+                      {% endif %}
+                    >
+                      {{ variant.title }}
+                    </option>
+                  {% endif %}
+                {% endfor %}
+              </select>
+            {%- endif -%}
 
-              {% for option in product.options -%}
-                <label>
-                  Style
-                  <select>
-                    {%- for value in product.options_by_name['style'].values %}
+            {% for option in product.options -%}
+              <label>
+                Style
+                <select>
+                  {%- for value in product.options_by_name.style.values %}
                     <option>{{ value }}</option>
-                    {%- endfor %}
-                  </select>
-                </label>
-                
-              {%- endfor %}
-              
+                  {%- endfor %}
+                </select>
+              </label>
+            {%- endfor %}
+
             <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
             {{ form | payment_terms }}
 
