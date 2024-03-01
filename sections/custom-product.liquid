@@ -110,9 +110,15 @@
                 {{ form | payment_terms }}
                 <div class="custom-product__form-bottom">
                   <div class="custom-product__form-quantity">
-                    <button type="button" class="minus">-</button>
+                    <button type="button" class="minus">
+                      {% render 'icon-minus' %}
+                      <span class="visualy-hidden">Minus</span>
+                    </button>
                     <input type="text" class="quantity" name="quantity" value="1">
-                    <button type="button" class="plus">+</button>
+                    <button type="button" class="plus">
+                      {% render 'icon-plus' %}
+                      <span class="visualy-hidden">Plus</span>
+                    </button>
                   </div>
                   <div class="custom-product__form-submit">
                     <button type="submit" class="custom-product__form-btn">
