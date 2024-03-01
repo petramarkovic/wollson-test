@@ -69,6 +69,10 @@
   display: flex;
 }
 
+.custom-product__form-quantity {
+  display: flex;
+}
+
 .custom-product__form-btn {
   background-color: #F8C063;
   padding: 10px;
