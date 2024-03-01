@@ -11,7 +11,7 @@ if (!customElements.get('custom-product-form')) {
 			this.minusBtn = this.querySelector('.minus');
 			this.plusBtn = this.querySelector('.plus');
 			this.quantityInput = this.querySelector('.quantity');
-            this.select = this.querySelector('.custom-product__variant input[type="radio"]');
+            this.select = this.querySelectorAll('.custom-product__variant input[type="radio"]');
             this.variantDetails = this.querySelector('.variant-details');
 			
 			this.quantityButtonsEvents();
