@@ -134,6 +134,30 @@
   </script>
 </div>
 
+{% javascript %}
+  const minusBtn = document.querySelector('.minus');
+   const plusBtn = document.querySelector('.plus');
+   const quantityInput = document.querySelector('.quantity');
+
+   // Add event listeners to the buttons
+   minusBtn.addEventListener('click', () => {
+     updateQuantity(-1);
+   });
+
+   plusBtn.addEventListener('click', () => {
+     updateQuantity(1);
+   });
+
+   // Function to update the quantity
+   function updateQuantity(change) {
+     let newValue = parseInt(quantityInput.value) + change;
+     if (newValue < 1) {
+       newValue = 1; // Ensure quantity doesn't go below 1
+     }
+     quantityInput.value = newValue;
+   }
+{% endjavascript %}
+
 <script src="{{ 'media-gallery.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'product-modal.js' | asset_url }}" defer="defer"></script>
 
