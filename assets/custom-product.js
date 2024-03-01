@@ -55,7 +55,7 @@ if (!customElements.get('custom-product-form')) {
 		}
 
         selectEvents() {
-          const options = this.select.querySelector('option');
+          const options = this.select.querySelectorAll('option');
           console.log(options);
           this.select.addEventListener('change', (event) => {
             console.log(this.data);
