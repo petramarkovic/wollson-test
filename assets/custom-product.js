@@ -61,6 +61,12 @@ if (!customElements.get('custom-product-form')) {
             // console.log(this.data);
             // console.log(event.target.value);
             console.log(this.data[event.target.value]);
+            options.forEach(option => {
+              option.removeAttribute('selected');
+              if (option.getAttribute('value') === event.target.value) {
+                console.log('option selected')
+              }
+            })
           });
         }
 	  }
