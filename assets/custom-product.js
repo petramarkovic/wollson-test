@@ -81,7 +81,7 @@ if (!customElements.get('custom-product-form')) {
               if (id === activeId) {
                 item.style.display = 'none';
               } else {
-                item.style.display = 'block';
+                item.style.display = 'flex';
               }
             })
           console.log(this.select.options[0].value);
