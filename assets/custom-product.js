@@ -80,7 +80,7 @@ if (!customElements.get('custom-product-form')) {
                 }
                 const activeId = this.inputs[0].value;
                 const items = document.querySelectorAll('.custom-product__item');
-              consolg.log(activeId, 'active');
+              console.log(activeId, 'active');
                 items.forEach(item => {
                     const id = item.getAttribute('data-id');
                   console.log(id, 'id');
