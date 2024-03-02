@@ -234,6 +234,24 @@
   margin-bottom: 8px;
 }
 
+@media screen and (max-width: 992px) {
+  .custom-product__message--mobile {
+    display: block;
+  }
+  .custom-product__message--desktop {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .custom-product__message--mobile {
+    display: none;
+  }
+  .custom-product__message--desktop {
+    display: block;
+  }
+}
+
 .custom-product__icons {
   display: flex;
   justify-content: center;
