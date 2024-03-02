@@ -41,7 +41,7 @@
               {% when 'icons' %}
                 {% render 'custom-icons', block: block %}
               {% when 'rating' %}
-                {% render 'custom-rating' %}
+                {% render 'custom-rating', block: block %}
               {% when 'form' %}
                 <custom-product-form>
                   {% for variant in product.variants %}
