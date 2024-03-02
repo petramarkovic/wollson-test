@@ -123,6 +123,9 @@
 
                 <input type="hidden" name="id" class="js-hidden-input" value="{{ product.selected_or_first_available_variant.id }}">
                 {{ form | payment_terms }}
+                {% if section.settings.free_shipping_message == true %}
+                  <p class="custom-product__message">Free US Shipping over $65 | Free US Returns</p>
+                {% endif %}
                 <div class="custom-product__form-bottom">
                   <div class="custom-product__form-quantity">
                     <button type="button" class="minus">
