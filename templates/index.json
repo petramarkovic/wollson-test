@@ -2,6 +2,17 @@
   "sections": {
     "custom_product_nKArTc": {
       "type": "custom-product",
+      "blocks": {
+        "title_BffgQq": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "title_BffgQq"
+      ],
       "settings": {
         "product": "kiehls-set",
         "section_color_scheme": "scheme-2",

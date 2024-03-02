@@ -97,9 +97,9 @@
 
           <custom-product-form>
             {% form 'product', product, id: 'custom-product-form',
-        class: 'form',
-        novalidate: 'novalidate',
-        data-type: 'add-to-cart-form' %}
+              class: 'form',
+              novalidate: 'novalidate',
+              data-type: 'add-to-cart-form' %}
               <div class="custom-product__form-content">
                 {%- if product.variants.size > 1 -%}
                   {% for variant in product.variants %}
@@ -136,6 +136,7 @@
                       {{ product.selected_or_first_available_variant.compare_at_price | money_with_currency }}
                       {{ product.selected_or_first_available_variant.price | money_with_currency }}
                     </button>
+                    {{ form | payment_button }}
                   </div>
                 </div>
               </div>
@@ -214,7 +215,7 @@
     {
       "type": "@app"
     },
-     {
+    {
       "type": "title",
       "name": "Product Title",
       "limit": 1,
@@ -240,6 +241,10 @@
           "label": "t:sections.all.heading_size.label"
         }
       ]
+    },
+    {
+      "type": "description",
+      "name": "Product description"
     }
   ],
   "presets": [
