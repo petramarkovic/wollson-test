@@ -79,9 +79,9 @@ if (!customElements.get('custom-product-form')) {
                   return;
               }
               const activeId = this.inputs[0].value;
-              this.items.forEach(item => {
+              this.items.forEach((item, index) => {
                   const id = item.getAttribute('data-id');
-                  if (id !== activeId) {
+                  if (index === 0) {
                       item.style.display = 'none';
                   } else {
                       item.style.display = 'flex';
