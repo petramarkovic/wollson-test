@@ -18,7 +18,7 @@ if (!customElements.get('custom-product-form')) {
                 this.form.addEventListener('submit', this.onSubmitHandler.bind(this));
                 this.quantityButtonsEvents();
                 this.inputsEvents();
-                this.loadMetafields();
+                // this.loadMetafields();
             }
 
             onSubmitHandler(e) {
