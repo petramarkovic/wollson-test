@@ -19,7 +19,6 @@
 
 {% assign variant_images = product.images | map: 'src' %}
 {% assign product = section.settings.product %}
-{% assign selectedProduct = product.variants.first %}
 
 <div class="section-{{ section.id }}-padding color-{{ section.settings.section_color_scheme }}">
   <div class="page-width">
@@ -39,6 +38,8 @@
                 <p class="custom-product__description">
                   {{- product.description -}}
                 </p>
+              {% when 'icons' %}
+                {% render 'custom-icons', block: block %}
               {%- endcase -%%}
             {%- endfor -%}
 
@@ -237,7 +238,20 @@
     },
     {
       "type": "description",
-      "name": "Product description"
+      "name": "Product description",
+      "limit": 1
+    },
+    {
+      "type": "icons",
+      "name": "Icons",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image_1",
+          "label": "First Icon"
+        }
+      ]
     }
   ],
   "presets": [
