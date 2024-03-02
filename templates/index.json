@@ -21,7 +21,11 @@
         "icons_Hth9eJ": {
           "type": "icons",
           "settings": {
-            "image_1": "shopify:\/\/shop_images\/shop-icons-desk.png"
+            "image_1": "shopify:\/\/shop_images\/shop-icons-desk.png",
+            "image_2": "shopify:\/\/shop_images\/2.png",
+            "image_3": "shopify:\/\/shop_images\/3.png",
+            "image_4": "shopify:\/\/shop_images\/4.png",
+            "image_5": "shopify:\/\/shop_images\/5.png"
           }
         }
       },
@@ -51,11 +55,19 @@
           "type": "description",
           "settings": {
           }
+        },
+        "icons_EKrzem": {
+          "type": "icons",
+          "settings": {
+            "image_1": "shopify:\/\/shop_images\/shop-icons-desk.png",
+            "image_2": "shopify:\/\/shop_images\/2.png"
+          }
         }
       },
       "block_order": [
         "title_xitEYT",
-        "description_zdcpQR"
+        "description_zdcpQR",
+        "icons_EKrzem"
       ],
       "settings": {
         "product": "kiehls-ultra-facial-cream",
