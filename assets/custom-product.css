@@ -260,3 +260,9 @@
 .custom-product__rating-star {
   color: rgb(var(--color-button));
 }
+
+.custom-product__rating-text {
+  font-size: 14px;
+  line-height: 18px;
+  color: rgb(var(--color-foreground));
+}
