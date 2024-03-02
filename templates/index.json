@@ -6,6 +6,8 @@
         "rating_CKQKr9": {
           "type": "rating",
           "settings": {
+            "rating": 3,
+            "scale_max": 5
           }
         },
         "title_BffgQq": {
