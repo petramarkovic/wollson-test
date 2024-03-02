@@ -49,7 +49,7 @@
             {% endif %}
             {% for variant in product.variants %}
               {% if variant.metafields.custom.included_product_1 != blank %}
-                <div class="custom-product__item {% unless selectedProduct %} hidden{% endunless %}" data-id="{{ variant.id }}">
+                <div class="custom-product__item {% unless product.variants[0] %} hidden{% endunless %}" data-id="{{ variant.id }}">
                   <div class="custom-product__item-icon">
                     {% render 'icon-check' %}
                   </div>
