@@ -80,17 +80,7 @@ if (!customElements.get('custom-product-form')) {
               if (!this.inputs || this.inputs.length === 0) {
                   return;
               }
-              let activeId;
-              for (const input of this.inputs) {
-                  if (input.checked) {
-                      activeId = input.value;
-                      break; // Stop after finding the first checked input
-                  }
-              }
-              if (!activeId) {
-                  // If no input is checked, use the value of the first input
-                  activeId = this.inputs[0].value;
-              }
+              const activeId = this.inputs[0].value;
               const items = document.querySelectorAll('.custom-product__item');
               items.forEach(item => {
                   const id = item.getAttribute('data-id');
