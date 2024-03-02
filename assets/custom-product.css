@@ -198,7 +198,7 @@
   z-index: 2;
 }
 
-.custom-product__variant-label .custom-product__variant-input:checked {
+.custom-product__variant-input:checked + .custom-product__variant-label {
   color: rgb(var(--color-background));
   background-color: rgb(var(--color-foreground));
 }
