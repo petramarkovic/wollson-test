@@ -116,7 +116,7 @@
                 {%- endif -%}
 
 
-                <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+                <input type="hidden" name="id" class="js-hidden-input" value="{{ product.selected_or_first_available_variant.id }}">
                 {{ form | payment_terms }}
                 <div class="custom-product__form-bottom">
                   <div class="custom-product__form-quantity">
