@@ -44,7 +44,7 @@
 
           <custom-product-form>
             {% for variant in product.variants %}
-            <div class="custom-product__items {% if product.variants.first == true %} hidden{% endif %}" data-id="{{ variant.id }}">
+            <div class="custom-product__items {% if variant.selected %} hidden{% endif %}" data-id="{{ variant.id }}">
               {% if product.metafields.custom.bundle == true %}
                 <h3>What’s inside:</h3>
               {% endif %}
