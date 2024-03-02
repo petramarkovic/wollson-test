@@ -40,6 +40,8 @@
                 </p>
               {% when 'icons' %}
                 {% render 'custom-icons', block: block %}
+              {% when 'ratings' %}
+                {% render 'custom-rating' %}
               {% when 'form' %}
                 <custom-product-form>
                   {% for variant in product.variants %}
@@ -239,6 +241,11 @@
     {
       "type": "description",
       "name": "Product description",
+      "limit": 1
+    },
+    {
+      "type": "rating",
+      "name": "Ratings",
       "limit": 1
     },
     {
