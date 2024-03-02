@@ -52,6 +52,12 @@
   letter-spacing: -0.005em;
 }
 
+@media screen and (max-width: 992px) {
+  .custom-product__description {
+    line-height: 22px;
+  }
+}
+
 .custom-product__items h3 {
   font-size: 16px;
   line-height: 20.8px;
