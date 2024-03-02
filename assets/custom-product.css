@@ -112,7 +112,7 @@
 }
 
 .custom-product__form-quantity button svg {
-  fill: rgb(var(--color-foreground));
+  stroke: rgb(var(--color-foreground));
 }
 
 .custom-product__form-submit {
