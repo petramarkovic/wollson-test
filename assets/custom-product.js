@@ -11,11 +11,12 @@ if (!customElements.get('custom-product-form')) {
 			this.minusBtn = this.querySelector('.minus');
 			this.plusBtn = this.querySelector('.plus');
 			this.quantityInput = this.querySelector('.quantity');
-            this.select = this.querySelectorAll('.custom-product__variant input[type="radio"]');
+            this.inputs = this.querySelectorAll('.custom-product__variant input[type="radio"]');
             this.variantDetails = this.querySelector('.variant-details');
+            this.hiddenInput = this.querySelector('.js-hidden-input');
 			
 			this.quantityButtonsEvents();
-            this.selectEvents();
+            this.inputsEvents();
             this.loadMetafields();
 
             this.data = JSON.parse(document.querySelector('#variant-data').textContent);
@@ -64,15 +65,15 @@ if (!customElements.get('custom-product-form')) {
             this.quantityInput.value = newValue;
 		}
 
-        selectEvents() {
-          
-          this.select.forEach(input => {
+        inputsEvents() {
+          this.inputs.forEach(input => {
               input.addEventListener('change', (event) => {
                   const selectedOptionValue = event.target.value;
                   const items = document.querySelectorAll('.custom-product__item');
 
                   input.removeAttribute('checked');
                   event.target.setAttribute('checked', 'checked');
+                  this.hiddenInput.setAttribute('value', selectedOptionValue);
       
                   items.forEach(item => {
                       const id = item.getAttribute('data-id');
