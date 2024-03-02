@@ -1,3 +1,5 @@
 <div class="custom-product__rating">
-  <span class="custom-product__rating-star">★</span>
+  {% for i in (1..block.settings.rating) %}
+    <span class="custom-product__rating-star">★</span>
+  {% endfor %}
 </div>
