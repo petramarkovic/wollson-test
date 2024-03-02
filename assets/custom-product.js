@@ -72,7 +72,7 @@ if (!customElements.get('custom-product-form')) {
                   const items = document.querySelectorAll('.custom-product__item');
 
                   input.removeAttribute('checked');
-                  event.target.setAttribute('checked');
+                  event.target.setAttribute('checked', 'checked');
       
                   items.forEach(item => {
                       const id = item.getAttribute('data-id');
