@@ -96,7 +96,7 @@
   background: none;
   font-size: 16px;
   line-height: 24px;
-  color: #61402E;
+  color: rgb(var(--color-foreground));
   font-family: 'Poppins', sans-serif;
   width: 100%;
   text-align: center;
@@ -105,7 +105,7 @@
 .custom-product__form-quantity button {
   border: none;
   background: transparent;
-  color: #61402E;
+  color: rgb(var(--color-foreground));
   font-family: 'Poppins', sans-serif;
   display: flex;
   align-items: center;
