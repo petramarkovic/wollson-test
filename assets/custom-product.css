@@ -41,6 +41,7 @@
   .custom-product__title {
     font-size: 28px;
     line-height: 36px;
+    margin-bottom: 12px;
   }
 }
 
