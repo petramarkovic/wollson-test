@@ -70,7 +70,7 @@ if (!customElements.get('custom-product-form')) {
                 this.hiddenInput.setAttribute('value', selectedOptionValue);
                 this.items.forEach(item => {
                     const id = item.getAttribute('data-id');
-                    item.style.display = (id === selectedOptionValue) ? 'none' : 'flex';
+                    item.style.display = (id === selectedOptionValue) ? 'none' : 'block';
                 });
             }
 
