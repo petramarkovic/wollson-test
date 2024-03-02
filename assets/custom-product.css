@@ -286,5 +286,4 @@
     var(--star-rating-star-background-color) var(--percent)
   );
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
