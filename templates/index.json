@@ -3,6 +3,11 @@
     "custom_product_nKArTc": {
       "type": "custom-product",
       "blocks": {
+        "rating_CKQKr9": {
+          "type": "rating",
+          "settings": {
+          }
+        },
         "title_BffgQq": {
           "type": "title",
           "settings": {
@@ -30,6 +35,7 @@
         }
       },
       "block_order": [
+        "rating_CKQKr9",
         "title_BffgQq",
         "description_gGLNA7",
         "form_WkMpKA",
