@@ -123,7 +123,7 @@
   font-family: 'Poppins', sans-serif;
   text-align: center;
   border: none;
-  color: #61402E;
+  color: rgb(var(--color-button-text));
   cursor: pointer;
   width: 100%;
   height: 100%;
