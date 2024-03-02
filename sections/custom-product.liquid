@@ -26,10 +26,19 @@
           
         </div>
         <div class="custom-product__col">
-          <h2 class="custom-product__title">{{ product.title }}</h2>
-          <p class="custom-product__description">
-            {{- product.description -}}
-          </p>
+          {%- for block in section.blocks -%}
+            {%- case block.type -%}
+              {%- when '@app' -%}
+                {% render block %}
+              {% when 'title' %}
+                <h2 class="custom-product__title">{{ product.title }}</h2>
+              {% when 'description' %}
+                <p class="custom-product__description">
+                  {{- product.description -}}
+                </p>
+              {%- endcase -%%}
+            {%- endfor -%}
+          
 
           <div class="custom-product__items">
             {% if product.metafields.custom.bundle == true %}
@@ -87,7 +96,10 @@
           </div>
 
           <custom-product-form>
-            {% form 'product', product %}
+            {% form 'product', product, id: 'custom-product-form',
+        class: 'form',
+        novalidate: 'novalidate',
+        data-type: 'add-to-cart-form' %}
               <div class="custom-product__form-content">
                 {%- if product.variants.size > 1 -%}
                   {% for variant in product.variants %}
@@ -199,6 +211,36 @@
     }
   ],
   "blocks": [
+    {
+      "type": "@app"
+    },
+     {
+      "type": "title",
+      "name": "Product Title",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "select",
+          "id": "heading_size",
+          "options": [
+            {
+              "value": "h2",
+              "label": "t:sections.all.heading_size.options__1.label"
+            },
+            {
+              "value": "h1",
+              "label": "t:sections.all.heading_size.options__2.label"
+            },
+            {
+              "value": "h0",
+              "label": "t:sections.all.heading_size.options__3.label"
+            }
+          ],
+          "default": "h1",
+          "label": "t:sections.all.heading_size.label"
+        }
+      ]
+    }
   ],
   "presets": [
     {
