@@ -181,6 +181,10 @@
   height: 100%;
 }
 
+.custom-product__form-content {
+  margin-top: 16px;
+}
+
 .custom-product__variant {
   display: inline-flex;
   margin-bottom: 32px;
