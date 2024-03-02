@@ -70,6 +70,9 @@ if (!customElements.get('custom-product-form')) {
               input.addEventListener('change', (event) => {
                   const selectedOptionValue = event.target.value;
                   const items = document.querySelectorAll('.custom-product__item');
+
+                  input.removeAttribute('checked');
+                  event.target.setAttribute('checked');
       
                   items.forEach(item => {
                       const id = item.getAttribute('data-id');
