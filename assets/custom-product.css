@@ -181,6 +181,11 @@
   height: 100%;
 }
 
+.custom-product__form-btn span {
+  text-decoration: line-through;
+  color: #b09f97;
+}
+
 .custom-product__form-content {
   margin-top: 16px;
 }
