@@ -87,7 +87,7 @@
 
 .custom-product__form-quantity {
   display: flex;
-  border: 1px solid #61402E;
+  border: 1px solid var(--color-foreground);
   max-width: 116px;
 }
 
