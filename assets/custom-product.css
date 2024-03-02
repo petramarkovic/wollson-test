@@ -233,6 +233,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   gap: 18px;
   margin-top: 32px;
+}
+
+@media screen and (max-width: 992px) {
+  .custom-product__icons {
+    margin-top: 24px;
+  }
+}
+
+.custom-product__icons img {
+  max-width: 100%
 }
