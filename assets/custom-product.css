@@ -257,3 +257,6 @@
   display: inline-block;
 }
 
+.custom-product__rating-star {
+  color: rgb(var(--color-button));
+}
