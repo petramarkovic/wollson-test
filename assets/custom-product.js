@@ -82,7 +82,11 @@ if (!customElements.get('custom-product-form')) {
                 const items = document.querySelectorAll('.custom-product__item');
                 items.forEach(item => {
                     const id = item.getAttribute('data-id');
-                    item.style.display = (id === activeId) ? 'none' : 'flex';
+                    if (id !== activeId) {
+                      item.style.display = 'none';
+                    } else {
+                      item.style.display = 'flex';
+                    }
                 });
             }
         }
