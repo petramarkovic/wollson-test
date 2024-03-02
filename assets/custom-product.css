@@ -181,9 +181,12 @@
   height: 100%;
 }
 
+.custom-product__variant {
+  display: inline-flex;
+}
+
 .custom-product__variant-label {
   position: relative;
-  display: inline-flex;
 }
 
 .custom-product__variant-input {
