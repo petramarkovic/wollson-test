@@ -190,6 +190,12 @@
   position: relative;
   padding: 10px;
   border: 1px solid rgb(var(--color-foreground));
+  transition: all 300ms ease-in-out;
+}
+
+.custom-product__variant-label .custom-product__variant-input[checked] {
+  color: rgb(var(--color-background));
+  background-color: rgb(var(--color-foreground));
 }
 
 .custom-product__variant-input {
