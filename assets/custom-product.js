@@ -13,7 +13,7 @@ if (!customElements.get('custom-product-form')) {
                 this.inputs = this.querySelectorAll('.custom-product__variant input[type="radio"]');
                 this.hiddenInput = this.querySelector('.js-hidden-input');
                 this.variantData = JSON.parse(document.querySelector('#variant-data').textContent);
-                this.items = this.querySelectorAll('.custom-product__item');
+                this.items = this.querySelectorAll('.custom-product__items');
 
                 this.form.addEventListener('submit', this.onSubmitHandler.bind(this));
                 this.quantityButtonsEvents();
@@ -80,7 +80,7 @@ if (!customElements.get('custom-product-form')) {
               }
               const activeId = this.inputs[0].value;
               this.items.forEach((item, index) => {
-                  const id = item.getAttribute('data-id');
+                  // const id = item.getAttribute('data-id');
                   if (index === 0) {
                       item.style.display = 'none';
                   } else {
