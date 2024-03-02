@@ -9,6 +9,13 @@
   max-width: calc(50% - 40px);
 }
 
+@media screen and (max-width: 992px) {
+  .custom-product__col {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
 .custom-product__col p {
   margin: 0 0 16px;
   font-size: 16px;
