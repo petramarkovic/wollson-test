@@ -62,12 +62,18 @@
             "image_1": "shopify:\/\/shop_images\/shop-icons-desk.png",
             "image_2": "shopify:\/\/shop_images\/2.png"
           }
+        },
+        "form_gkHMbJ": {
+          "type": "form",
+          "settings": {
+          }
         }
       },
       "block_order": [
         "title_xitEYT",
         "description_zdcpQR",
-        "icons_EKrzem"
+        "icons_EKrzem",
+        "form_gkHMbJ"
       ],
       "settings": {
         "product": "kiehls-ultra-facial-cream",
@@ -89,11 +95,17 @@
           "type": "description",
           "settings": {
           }
+        },
+        "form_6arQKk": {
+          "type": "form",
+          "settings": {
+          }
         }
       },
       "block_order": [
         "title_eaB9VQ",
-        "description_L9NWhf"
+        "description_L9NWhf",
+        "form_6arQKk"
       ],
       "settings": {
         "product": "kiehls-ultra-facial-cleanser",
@@ -102,90 +114,11 @@
         "padding_bottom": 36,
         "free_shipping_message": true
       }
-    },
-    "featured_product_ef8x9V": {
-      "type": "featured-product",
-      "blocks": {
-        "text_TBDeib": {
-          "type": "text",
-          "settings": {
-            "text": "{{ section.settings.product.vendor }}",
-            "text_style": "uppercase"
-          }
-        },
-        "title_UDbHpt": {
-          "type": "title",
-          "settings": {
-            "heading_size": "h1"
-          }
-        },
-        "price_RdD3tt": {
-          "type": "price",
-          "settings": {
-          }
-        },
-        "variant_picker_YqjmQH": {
-          "type": "variant_picker",
-          "settings": {
-            "picker_type": "button",
-            "swatch_shape": "circle"
-          }
-        },
-        "quantity_selector_dpcnfq": {
-          "type": "quantity_selector",
-          "settings": {
-          }
-        },
-        "buy_buttons_xDgrdA": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_dynamic_checkout": true,
-            "show_gift_card_recipient": true
-          }
-        },
-        "share_GHjf3G": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share"
-          }
-        },
-        "sku_mhQnMU": {
-          "type": "sku",
-          "settings": {
-            "text_style": "body"
-          }
-        }
-      },
-      "block_order": [
-        "text_TBDeib",
-        "title_UDbHpt",
-        "price_RdD3tt",
-        "variant_picker_YqjmQH",
-        "quantity_selector_dpcnfq",
-        "buy_buttons_xDgrdA",
-        "share_GHjf3G",
-        "sku_mhQnMU"
-      ],
-      "settings": {
-        "product": "",
-        "color_scheme": "",
-        "secondary_background": false,
-        "media_size": "medium",
-        "constrain_to_viewport": true,
-        "media_fit": "contain",
-        "media_position": "left",
-        "image_zoom": "lightbox",
-        "hide_variants": false,
-        "enable_video_looping": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
     "custom_product_nKArTc",
     "custom_product_QMdyad",
-    "custom_product_LHVc3X",
-    "featured_product_ef8x9V"
+    "custom_product_LHVc3X"
   ]
 }
