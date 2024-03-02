@@ -220,3 +220,10 @@
   cursor: pointer;
   margin: 0;
 }
+
+.custom-product__message {
+  text-align: right;
+  color: rgb(var(--color-foreground));
+  font-size: 14px;
+  line-height: 18px;
+}
