@@ -196,11 +196,11 @@
 .custom-product__variant-text {
   position: relative;
   z-index: 2;
+  color: rgb(var(--color-foreground));
 }
 
-.custom-product__variant-label .custom-product__variant-input:checked + .custom-product__variant-text {
+.custom-product__variant-input:checked + .custom-product__variant-text {
   color: rgb(var(--color-background));
-  background-color: rgb(var(--color-foreground));
 }
 
 .custom-product__variant-input {
