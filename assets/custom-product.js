@@ -18,7 +18,7 @@ if (!customElements.get('custom-product-form')) {
                 this.form.addEventListener('submit', this.onSubmitHandler.bind(this));
                 this.quantityButtonsEvents();
                 this.inputsEvents();
-                this.loadMetafields();
+                // this.loadMetafields();
             }
 
             onSubmitHandler(e) {
@@ -80,7 +80,6 @@ if (!customElements.get('custom-product-form')) {
               }
               const activeId = this.inputs[0].value;
               this.items.forEach((item, index) => {
-                  // const id = item.getAttribute('data-id');
                   if (index === 0) {
                       item.style.display = 'none';
                   } else {
