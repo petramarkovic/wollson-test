@@ -11,14 +11,13 @@ if (!customElements.get('custom-product-form')) {
                 this.plusBtn = this.querySelector('.plus');
                 this.quantityInput = this.querySelector('.quantity');
                 this.inputs = this.querySelectorAll('.custom-product__variant input[type="radio"]');
-                this.variantDetails = this.querySelector('.variant-details');
                 this.hiddenInput = this.querySelector('.js-hidden-input');
                 this.variantData = JSON.parse(document.querySelector('#variant-data').textContent);
 
                 this.form.addEventListener('submit', this.onSubmitHandler.bind(this));
                 this.quantityButtonsEvents();
                 this.inputsEvents();
-                // this.loadMetafields();
+                this.loadMetafields();
             }
 
             onSubmitHandler(e) {
