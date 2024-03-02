@@ -197,10 +197,12 @@
   position: relative;
   z-index: 2;
   color: rgb(var(--color-foreground));
+  background-color: rgb(var(--color-background));
 }
 
 .custom-product__variant-input:checked + .custom-product__variant-text {
   color: rgb(var(--color-background));
+  background-color: rgb(var(--color-foreground));
 }
 
 .custom-product__variant-input {
