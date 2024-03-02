@@ -189,6 +189,7 @@
 .custom-product__variant-label {
   position: relative;
   border: 1px solid rgb(var(--color-foreground));
+  padding: 10px;
 }
 
 .custom-product__variant-text {
