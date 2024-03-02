@@ -111,6 +111,10 @@
   align-items: center;
 }
 
+.custom-product__form-quantity button svg {
+  fill: rgb(var(--color-foreground));
+}
+
 .custom-product__form-submit {
   flex: 1 1 auto;
 }
