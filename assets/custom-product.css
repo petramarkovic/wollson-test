@@ -119,6 +119,12 @@
   justify-content: space-between;
 }
 
+@media screen and (max-width: 992px) {
+  .custom-product__form-bottom {
+    flex-direction: column;
+  }
+}
+
 .custom-product__form-quantity {
   display: flex;
   border: 1px solid rgb(var(--color-foreground));
