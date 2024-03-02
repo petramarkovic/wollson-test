@@ -84,6 +84,7 @@ if (!customElements.get('custom-product-form')) {
               const items = document.querySelectorAll('.custom-product__item');
               items.forEach(item => {
                   const id = item.getAttribute('data-id');
+                console.log(id, activeId);
                   if (id !== activeId) {
                       item.style.display = 'none';
                   } else {
