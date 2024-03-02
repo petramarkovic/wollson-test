@@ -135,6 +135,7 @@
 @media screen and (max-width: 992px) {
   .custom-product__form-quantity {
     max-width: unset;
+    padding: 0 24px;
   }
 }
 
