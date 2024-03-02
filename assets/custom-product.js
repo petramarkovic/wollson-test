@@ -13,6 +13,7 @@ if (!customElements.get('custom-product-form')) {
                 this.inputs = this.querySelectorAll('.custom-product__variant input[type="radio"]');
                 this.hiddenInput = this.querySelector('.js-hidden-input');
                 this.variantData = JSON.parse(document.querySelector('#variant-data').textContent);
+                this.items = this.querySelectorAll('.custom-product__item');
 
                 this.form.addEventListener('submit', this.onSubmitHandler.bind(this));
                 this.quantityButtonsEvents();
@@ -69,8 +70,7 @@ if (!customElements.get('custom-product-form')) {
                     selectedInput.setAttribute('checked', 'checked');
                 }
                 this.hiddenInput.setAttribute('value', selectedOptionValue);
-                const items = document.querySelectorAll('.custom-product__item');
-                items.forEach(item => {
+                this.items.forEach(item => {
                     const id = item.getAttribute('data-id');
                     item.style.display = (id === selectedOptionValue) ? 'none' : 'flex';
                 });
@@ -81,8 +81,7 @@ if (!customElements.get('custom-product-form')) {
                   return;
               }
               const activeId = this.inputs[0].value;
-              const items = document.querySelectorAll('.custom-product__item');
-              items.forEach(item => {
+              this.items.forEach(item => {
                   const id = item.getAttribute('data-id');
                 console.log(id, 'id');
                 console.log(activeId, 'activeid');
