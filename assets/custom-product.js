@@ -71,7 +71,9 @@ if (!customElements.get('custom-product-form')) {
                   const selectedOptionValue = event.target.value;
                   const items = document.querySelectorAll('.custom-product__item');
 
-                  input.removeAttribute('checked');
+                  this.inputs.forEach(input => {
+                      input.removeAttribute('checked');
+                  });
                   event.target.setAttribute('checked', 'checked');
                   this.hiddenInput.setAttribute('value', selectedOptionValue);
       
