@@ -17,7 +17,7 @@
   }
 {%- endstyle -%}
 
-{% assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' %}
+{% assign variant_images = product.images | map: 'src' %}
 {% assign product = section.settings.product %}
 {% assign selectedProduct = product.variants.first %}
 
@@ -26,7 +26,7 @@
     <div class="custom-product">
       {% if section.settings.product != blank %}
         <div class="custom-product__col">
-          {% render 'product-media-gallery', variant_images: product.images %}
+          {% render 'product-media-gallery', variant_images: variant_images %}
         </div>
         <div class="custom-product__col">
           {%- for block in section.blocks -%}
