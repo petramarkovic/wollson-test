@@ -10,5 +10,14 @@
     <span class="custom-product__rating-star">★</span>
     <span class="custom-product__rating-star">★</span>
     <span class="custom-product__rating-star">★</span>
+  {% elsif block.settings.rating == 3 %}
+    <span class="custom-product__rating-star">★</span>
+    <span class="custom-product__rating-star">★</span>
+    <span class="custom-product__rating-star">★</span>
+  {% elsif block.settings.rating == 2 %}
+    <span class="custom-product__rating-star">★</span>
+    <span class="custom-product__rating-star">★</span>
+  {% else %}
+    <span class="custom-product__rating-star">★</span>
   {% endif %}
 </div>
