@@ -16,7 +16,7 @@
   }
 }
 
-/* .custom-product__col p {
+.custom-product__col p:not([class]) {
   margin: 0 0 16px;
   font-size: 16px;
   line-height: 24px;
@@ -24,10 +24,10 @@
 }
 
 @media screen and (max-width: 992px) {
-  .custom-product__col p {
+  .custom-product__col p:not([class]) {
     line-height: 22px;
   }
-} */
+}
 
 .custom-product__title {
   font-size: 32px;
