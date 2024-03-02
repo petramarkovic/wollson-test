@@ -108,7 +108,8 @@
                   {% for variant in product.variants %}
                     {% if variant.available %}
                       <div class="custom-product__variant">
-                        <label for="variant-{{ variant.id }}" class="custom-product__variant-label">{{ variant.title }}
+                        <label for="variant-{{ variant.id }}" class="custom-product__variant-label">
+                          <span class="custom-product__variant-text">{{ variant.title }}</span>
                           <input type="radio" id="variant-{{ variant.id }}" name="variant" value="{{ variant.id }}"
                                {% if variant == product.selected_or_first_available_variant %}
                                  checked="checked"
