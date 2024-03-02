@@ -23,7 +23,7 @@
     <div class="custom-product">
       {% if section.settings.product != blank %}
         <div class="custom-product__col">
-          
+          {% render 'product-media-gallery', product: product, variant_images: variant_images %}
         </div>
         <div class="custom-product__col">
           {%- for block in section.blocks -%}
