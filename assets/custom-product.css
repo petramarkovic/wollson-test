@@ -70,7 +70,6 @@
   display: flex;
   gap: 12px;
   margin-bottom: 8px;
-  display: none;
 }
 
 .custom-product__item:last-of-type {
