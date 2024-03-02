@@ -40,116 +40,116 @@
                 </p>
               {% when 'icons' %}
                 {% render 'custom-icons', block: block %}
+              {% when 'form' %}
+                <custom-product-form>
+                  {% for variant in product.variants %}
+                  <div class="custom-product__items" data-id="{{ variant.id }}">
+                    {% if product.metafields.custom.bundle == true %}
+                      <h3>What’s inside:</h3>
+                    {% endif %}
+                      {% if variant.metafields.custom.included_product_1 != blank %}
+                        <div class="custom-product__item" data-id="{{ variant.id }}">
+                          <div class="custom-product__item-icon">
+                            {% render 'icon-check' %}
+                          </div>
+                          <div class="custom-product__item-info">
+                            <h4 class="custom-product__item-title">
+                              1 X {{ variant.metafields.custom.included_product_1.value.title }}
+                            </h4>
+                            <p class="custom-product__item-description">
+                              {{ variant.metafields.custom.included_product_1.value.description }}
+                            </p>
+                          </div>
+                        </div>
+                      {% endif %}
+        
+                      {% if variant.metafields.custom.included_product_2 != blank %}
+                        <div class="custom-product__item" data-id="{{ variant.id }}">
+                          <div class="custom-product__item-icon">
+                            {% render 'icon-check' %}
+                          </div>
+                          <div class="custom-product__item-info">
+                            <h4 class="custom-product__item-title">
+                              1 X {{ variant.metafields.custom.included_product_2.value.title }}
+                            </h4>
+                            <p class="custom-product__item-description">
+                              {{ variant.metafields.custom.included_product_2.value.description }}
+                            </p>
+                          </div>
+                        </div>
+                      {% endif %}
+        
+                      {% if variant.metafields.custom.included_product_3 != blank %}
+                        <div class="custom-product__item" data-id="{{ variant.id }}">
+                          <div class="custom-product__item-icon">
+                            {% render 'icon-check' %}
+                          </div>
+                          <div class="custom-product__item-info">
+                            <h4 class="custom-product__item-title">
+                              1 X {{ variant.metafields.custom.included_product_3.value.title }}
+                            </h4>
+                            <p class="custom-product__item-description">
+                              {{ variant.metafields.custom.included_product_3.value.description }}
+                            </p>
+                          </div>
+                        </div>
+                      {% endif %}
+                  </div>
+                  {% endfor %}
+                  {% form 'product', product, id: 'custom-product-form',
+                    class: 'form',
+                    novalidate: 'novalidate',
+                    data-type: 'add-to-cart-form' %}
+                    <div class="custom-product__form-content">
+                      {%- if product.variants.size > 1 -%}
+                        {% for variant in product.variants %}
+                          {% if variant.available %}
+                            <div class="custom-product__variant">
+                              <label for="variant-{{ variant.id }}" class="custom-product__variant-label">
+                                <input type="radio" id="variant-{{ variant.id }}" name="variant" value="{{ variant.id }}"
+                                     {% if variant == product.selected_or_first_available_variant %}
+                                       checked="checked"
+                                     {% endif %} class="custom-product__variant-input">
+                                <span class="custom-product__variant-text">{{ variant.title }}</span>
+                              </label>
+                            </div>
+                          {% endif %}
+                        {% endfor %}
+                      {%- endif -%}
+      
+      
+                      <input type="hidden" name="id" class="js-hidden-input" value="{{ product.selected_or_first_available_variant.id }}">
+                      {{ form | payment_terms }}
+                      {% if section.settings.free_shipping_message == true %}
+                        <p class="custom-product__message">Free US Shipping over $65 | Free US Returns</p>
+                      {% endif %}
+                      <div class="custom-product__form-bottom">
+                        <div class="custom-product__form-quantity">
+                          <button type="button" class="minus">
+                            {% render 'icon-minus' %}
+                            <span class="visually-hidden">Minus</span>
+                          </button>
+                          <label class="visually-hidden">Quantity:</label>
+                          <input type="text" class="quantity" name="quantity" value="01">
+                          <button type="button" class="plus">
+                            {% render 'icon-plus' %}
+                            <span class="visually-hidden">Plus</span>
+                          </button>
+                        </div>
+                        <div class="custom-product__form-submit">
+                          <button type="submit" class="custom-product__form-btn">
+                            ADD TO CART -
+                            {{ product.selected_or_first_available_variant.compare_at_price | money_with_currency }}
+                            {{ product.selected_or_first_available_variant.price | money_with_currency }}
+                          </button>
+                          <!-- {{ form | payment_button }} -->
+                        </div>
+                      </div>
+                    </div>
+                  {% endform %}
+                </custom-product-form>
               {%- endcase -%%}
             {%- endfor -%}
-
-          <custom-product-form>
-            {% for variant in product.variants %}
-            <div class="custom-product__items" data-id="{{ variant.id }}">
-              {% if product.metafields.custom.bundle == true %}
-                <h3>What’s inside:</h3>
-              {% endif %}
-                {% if variant.metafields.custom.included_product_1 != blank %}
-                  <div class="custom-product__item" data-id="{{ variant.id }}">
-                    <div class="custom-product__item-icon">
-                      {% render 'icon-check' %}
-                    </div>
-                    <div class="custom-product__item-info">
-                      <h4 class="custom-product__item-title">
-                        1 X {{ variant.metafields.custom.included_product_1.value.title }}
-                      </h4>
-                      <p class="custom-product__item-description">
-                        {{ variant.metafields.custom.included_product_1.value.description }}
-                      </p>
-                    </div>
-                  </div>
-                {% endif %}
-  
-                {% if variant.metafields.custom.included_product_2 != blank %}
-                  <div class="custom-product__item" data-id="{{ variant.id }}">
-                    <div class="custom-product__item-icon">
-                      {% render 'icon-check' %}
-                    </div>
-                    <div class="custom-product__item-info">
-                      <h4 class="custom-product__item-title">
-                        1 X {{ variant.metafields.custom.included_product_2.value.title }}
-                      </h4>
-                      <p class="custom-product__item-description">
-                        {{ variant.metafields.custom.included_product_2.value.description }}
-                      </p>
-                    </div>
-                  </div>
-                {% endif %}
-  
-                {% if variant.metafields.custom.included_product_3 != blank %}
-                  <div class="custom-product__item" data-id="{{ variant.id }}">
-                    <div class="custom-product__item-icon">
-                      {% render 'icon-check' %}
-                    </div>
-                    <div class="custom-product__item-info">
-                      <h4 class="custom-product__item-title">
-                        1 X {{ variant.metafields.custom.included_product_3.value.title }}
-                      </h4>
-                      <p class="custom-product__item-description">
-                        {{ variant.metafields.custom.included_product_3.value.description }}
-                      </p>
-                    </div>
-                  </div>
-                {% endif %}
-            </div>
-            {% endfor %}
-            {% form 'product', product, id: 'custom-product-form',
-              class: 'form',
-              novalidate: 'novalidate',
-              data-type: 'add-to-cart-form' %}
-              <div class="custom-product__form-content">
-                {%- if product.variants.size > 1 -%}
-                  {% for variant in product.variants %}
-                    {% if variant.available %}
-                      <div class="custom-product__variant">
-                        <label for="variant-{{ variant.id }}" class="custom-product__variant-label">
-                          <input type="radio" id="variant-{{ variant.id }}" name="variant" value="{{ variant.id }}"
-                               {% if variant == product.selected_or_first_available_variant %}
-                                 checked="checked"
-                               {% endif %} class="custom-product__variant-input">
-                          <span class="custom-product__variant-text">{{ variant.title }}</span>
-                        </label>
-                      </div>
-                    {% endif %}
-                  {% endfor %}
-                {%- endif -%}
-
-
-                <input type="hidden" name="id" class="js-hidden-input" value="{{ product.selected_or_first_available_variant.id }}">
-                {{ form | payment_terms }}
-                {% if section.settings.free_shipping_message == true %}
-                  <p class="custom-product__message">Free US Shipping over $65 | Free US Returns</p>
-                {% endif %}
-                <div class="custom-product__form-bottom">
-                  <div class="custom-product__form-quantity">
-                    <button type="button" class="minus">
-                      {% render 'icon-minus' %}
-                      <span class="visually-hidden">Minus</span>
-                    </button>
-                    <label class="visually-hidden">Quantity:</label>
-                    <input type="text" class="quantity" name="quantity" value="01">
-                    <button type="button" class="plus">
-                      {% render 'icon-plus' %}
-                      <span class="visually-hidden">Plus</span>
-                    </button>
-                  </div>
-                  <div class="custom-product__form-submit">
-                    <button type="submit" class="custom-product__form-btn">
-                      ADD TO CART -
-                      {{ product.selected_or_first_available_variant.compare_at_price | money_with_currency }}
-                      {{ product.selected_or_first_available_variant.price | money_with_currency }}
-                    </button>
-                    <!-- {{ form | payment_button }} -->
-                  </div>
-                </div>
-              </div>
-            {% endform %}
-          </custom-product-form>
         </div>
       {% endif %}
     </div>
@@ -239,6 +239,11 @@
     {
       "type": "description",
       "name": "Product description",
+      "limit": 1
+    },
+    {
+      "type": "form",
+      "name": "Product Form",
       "limit": 1
     },
     {
