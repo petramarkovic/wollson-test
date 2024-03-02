@@ -180,3 +180,17 @@
   width: 100%;
   height: 100%;
 }
+
+.custom-product__variant-label {
+  position: relative;
+  display: inline-flex;
+}
+
+.custom-product__variant-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  appearance: none;
+}
