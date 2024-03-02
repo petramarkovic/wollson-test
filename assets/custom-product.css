@@ -193,6 +193,11 @@
   transition: all 300ms ease-in-out;
 }
 
+.custom-product__variant-text {
+  position: relative;
+  z-index: 2;
+}
+
 .custom-product__variant-label .custom-product__variant-input[checked] {
   color: rgb(var(--color-background));
   background-color: rgb(var(--color-foreground));
@@ -205,7 +210,7 @@
   width: 100%;
   height: 100%;
   appearance: none;
-  z-index: 10;
+  z-index: 1;
   cursor: pointer;
   margin: 0;
 }
