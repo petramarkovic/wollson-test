@@ -87,7 +87,7 @@
           </div>
 
           <custom-product-form>
-            {% form 'product', product, id: 'test' %}
+            {% form 'product', product %}
               <div class="custom-product__form-content">
                 {%- if product.variants.size > 1 -%}
                   {% for variant in product.variants %}
@@ -96,7 +96,7 @@
                         <input type="radio" id="variant-{{ variant.id }}" name="variant" value="{{ variant.id }}"
                                {% if variant == product.selected_or_first_available_variant %}
                                  checked="checked"
-                               {% endif %} form="test">
+                               {% endif %}>
                         <label for="variant-{{ variant.id }}">{{ variant.title }}</label>
                       </div>
                     {% endif %}
