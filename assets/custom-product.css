@@ -16,7 +16,7 @@
   }
 }
 
-.custom-product__col p {
+/* .custom-product__col p {
   margin: 0 0 16px;
   font-size: 16px;
   line-height: 24px;
@@ -27,7 +27,7 @@
   .custom-product__col p {
     line-height: 22px;
   }
-}
+} */
 
 .custom-product__title {
   font-size: 32px;
