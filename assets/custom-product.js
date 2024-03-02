@@ -84,7 +84,7 @@ if (!customElements.get('custom-product-form')) {
                   if (index === 0) {
                       item.style.display = 'none';
                   } else {
-                      item.style.display = 'flex';
+                      item.style.display = 'block';
                   }
               });
             }
