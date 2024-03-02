@@ -90,11 +90,11 @@ if (!customElements.get('custom-product-form')) {
         }
 
         loadMetafields() {
-          if (!this.select || this.select.length === 0) {
+          if (!this.inputs || this.inputs.length === 0) {
               return;
           }
       
-          const activeId = this.select[0].value;
+          const activeId = this.inputs[0].value;
           const items = document.querySelectorAll('.custom-product__item');
       
           items.forEach(item => {
