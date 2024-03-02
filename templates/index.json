@@ -8,10 +8,16 @@
           "settings": {
             "heading_size": "h1"
           }
+        },
+        "description_gGLNA7": {
+          "type": "description",
+          "settings": {
+          }
         }
       },
       "block_order": [
-        "title_BffgQq"
+        "title_BffgQq",
+        "description_gGLNA7"
       ],
       "settings": {
         "product": "kiehls-set",
@@ -22,6 +28,23 @@
     },
     "custom_product_QMdyad": {
       "type": "custom-product",
+      "blocks": {
+        "title_xitEYT": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "description_zdcpQR": {
+          "type": "description",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "title_xitEYT",
+        "description_zdcpQR"
+      ],
       "settings": {
         "product": "kiehls-ultra-facial-cream",
         "section_color_scheme": "scheme-1",
@@ -31,6 +54,23 @@
     },
     "custom_product_LHVc3X": {
       "type": "custom-product",
+      "blocks": {
+        "title_eaB9VQ": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "description_L9NWhf": {
+          "type": "description",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "title_eaB9VQ",
+        "description_L9NWhf"
+      ],
       "settings": {
         "product": "kiehls-ultra-facial-cleanser",
         "section_color_scheme": "scheme-3",
