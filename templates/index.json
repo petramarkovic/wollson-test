@@ -9,6 +9,24 @@
         "padding_bottom": 36
       }
     },
+    "custom_product_QMdyad": {
+      "type": "custom-product",
+      "settings": {
+        "product": "kiehls-ultra-facial-cream",
+        "section_color_scheme": "scheme-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "custom_product_LHVc3X": {
+      "type": "custom-product",
+      "settings": {
+        "product": "kiehls-ultra-facial-cleanser",
+        "section_color_scheme": "scheme-3",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "featured_product_ef8x9V": {
       "type": "featured-product",
       "blocks": {
@@ -83,6 +101,8 @@
   },
   "order": [
     "custom_product_nKArTc",
+    "custom_product_QMdyad",
+    "custom_product_LHVc3X",
     "featured_product_ef8x9V"
   ]
 }
