@@ -140,7 +140,7 @@
                           <button type="submit" class="custom-product__form-btn">
                             ADD TO CART -
                             {{ product.selected_or_first_available_variant.compare_at_price | money_with_currency }}
-                            {{ product.selected_or_first_available_variant.price | money_with_currency }}
+                            <span>{{ product.selected_or_first_available_variant.price | money_with_currency }}</span>
                           </button>
                           <!-- {{ form | payment_button }} -->
                         </div>
