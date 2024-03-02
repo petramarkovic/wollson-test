@@ -134,7 +134,7 @@
 
 @media screen and (max-width: 992px) {
   .custom-product__form-quantity {
-    width: 100%;
+    max-width: unset;
   }
 }
 
