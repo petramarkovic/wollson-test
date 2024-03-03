@@ -55,7 +55,6 @@ if (!customElements.get('custom-product-form')) {
                 this.inputs.forEach(input => {
                     input.addEventListener('change', () => {
                         this.handleInputSelection(input.value);
-                      console.log(input.value);
                     });
                 });
             }
@@ -65,6 +64,7 @@ if (!customElements.get('custom-product-form')) {
                     input.removeAttribute('checked');
                 });
                 const selectedInput = this.querySelector(`.custom-product__variant input[type="radio"][value="${selectedOptionValue}"]`);
+              console.log(selectedInput)
                 if (selectedInput) {
                     selectedInput.setAttribute('checked', 'checked');
                 }
