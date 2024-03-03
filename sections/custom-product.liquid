@@ -168,9 +168,11 @@
                           {% if section.settings.free_shipping_message == true %}
                             <p class="custom-product__message custom-product__message--mobile">Free US Shipping over $65 | Free US Returns</p>
                           {% endif %}
-                          {% if section.settings.shop_pay_message == true or section.settins.shop_pay_logo != blank %}
+                          {% if section.settings.shop_pay_message == true %}
                             <p class="custom-product__message custom-product__message--shop-pay">4 interest-free installments of $18.00 with
-                              {{ section.settings.shop_pay_logo | image_url: width: 59 | image_tag }}
+                              {% if section.settins.shop_pay_logo != blank  %}
+                                {{ section.settings.shop_pay_logo | image_url: width: 59 | image_tag }}
+                              {% endif %}
                             </p>
                           {% endif %}
                         </div>
