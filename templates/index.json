@@ -31,7 +31,6 @@
         "icons_Hth9eJ": {
           "type": "icons",
           "settings": {
-            "icon_size": 126,
             "image_1": "shopify:\/\/shop_images\/shop-icons-desk.png",
             "image_2": "shopify:\/\/shop_images\/2.png",
             "image_3": "shopify:\/\/shop_images\/3.png",
@@ -76,7 +75,6 @@
         "icons_EKrzem": {
           "type": "icons",
           "settings": {
-            "icon_size": 96,
             "image_1": "shopify:\/\/shop_images\/shop-icons-desk.png",
             "image_2": "shopify:\/\/shop_images\/2.png"
           }
@@ -99,7 +97,7 @@
         "text_align": "left",
         "section_color_scheme": "scheme-1",
         "free_shipping_message": true,
-        "shop_pay_message": true,
+        "shop_pay_message": false,
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -135,7 +133,7 @@
         "text_align": "left",
         "section_color_scheme": "scheme-3",
         "free_shipping_message": true,
-        "shop_pay_message": true,
+        "shop_pay_message": false,
         "padding_top": 36,
         "padding_bottom": 36
       }

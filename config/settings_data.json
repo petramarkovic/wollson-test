@@ -134,14 +134,6 @@
     "content_for_index": [
 
     ],
-    "blocks": {
-      "14288002729265275678": {
-        "type": "shopify:\/\/apps\/go-product-page-gallery-zoom\/blocks\/app-embed\/00e2bd89-9dbb-4f36-8a7f-03768835bc78",
-        "disabled": true,
-        "settings": {
-        }
-      }
-    },
     "color_schemes": {
       "scheme-1": {
         "settings": {
