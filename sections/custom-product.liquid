@@ -33,7 +33,7 @@
               {%- when '@app' -%}
                 {% render block %}
               {% when 'title' %}
-                  <h2 class="custom-product__title">{{ product.title }}</h2>
+                  <h2 class="custom-product__title {{ block.settings.heading_size }}">{{ product.title }}</h2>
               {% when 'description' %}
                 <p class="custom-product__description">
                   {{- product.description -}}
