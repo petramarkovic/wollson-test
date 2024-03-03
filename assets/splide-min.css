@@ -151,7 +151,7 @@
     cursor: pointer;
     display: -ms-flexbox;
     display: flex;
-    height: 2em;
+    height: 36px;
     -ms-flex-pack: center;
     justify-content: center;
     opacity: .7;
@@ -159,7 +159,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 2em;
+    width: 36px;
     z-index: 1
 }
 
