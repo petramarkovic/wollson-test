@@ -323,6 +323,7 @@ h3.custom-product__title {
   align-items: center;
   flex-wrap: wrap;
   gap: 15px;
+  margin-top: 46px;
 }
 
 @media screen and (max-width: 992px) {
