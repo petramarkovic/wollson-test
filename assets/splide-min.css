@@ -145,7 +145,7 @@
 .splide__arrow {
     -ms-flex-align: center;
     align-items: center;
-    background: #ccc;
+    background: rgb(var(--color-background));
     border: 0;
     border-radius: 50%;
     cursor: pointer;
@@ -164,7 +164,7 @@
 }
 
 .splide__arrow svg {
-    fill: #000;
+    fill: rgb(var(--color-foreground));
     height: 1.2em;
     width: 1.2em
 }
