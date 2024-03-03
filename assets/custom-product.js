@@ -84,7 +84,7 @@ if (!customElements.get('custom-product-form')) {
               this.items.forEach((item, index) => {
                   const id = item.getAttribute('data-id');
                   console.log(id, 'id');
-                  if (index === 0) {
+                  if (activeId !== id) {
                       item.style.display = 'none';
                   } else {
                       item.style.display = 'block';
