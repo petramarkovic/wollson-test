@@ -33,11 +33,11 @@
               {%- when '@app' -%}
                 {% render block %}
               {% when 'title' %}
-                {% if block.settins.heading_size == 'h1' %}
+                {% if block.settins.heading_size == "h1" %}
                   <h1 class="custom-product__title">{{ product.title }}</h1>
-                {% elsif block.settins.heading_size == 'h2' %}
+                {% elsif block.settins.heading_size == "h2" %}
                   <h2 class="custom-product__title">{{ product.title }}</h2>
-                {% elsif block.settins.heading_size == 'h3' %}
+                {% elsif block.settins.heading_size == "h3" %}
                   <h3 class="custom-product__title">{{ product.title }}</h3>
                 {% endif %}
               {% when 'description' %}
