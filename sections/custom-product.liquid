@@ -40,7 +40,7 @@
                   <ul class="splide__list">
                     {% for media in product.media %}
                       <li class="splide__slide">
-                        {{ media.preview_image.src | image_url: width: 67 | image_tag }}
+                        {{ media.preview_image.src | image_url: width: 50 | image_tag }}
                       </li>
                     {% endfor %}
                   </ul>
