@@ -302,9 +302,13 @@ h3.custom-product__title {
 @media screen and (max-width: 992px) {
   .custom-product__message--mobile {
     display: block;
+    text-align: center;
   }
   .custom-product__message--desktop {
     display: none;
+  }
+  .custom-product__message--shop-pay {
+    justify-content: center;
   }
 }
 
