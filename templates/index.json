@@ -15,6 +15,7 @@
         "title_BffgQq": {
           "type": "title",
           "settings": {
+            "heading_size": "h1"
           }
         },
         "description_gGLNA7": {
@@ -59,6 +60,7 @@
         "title_xitEYT": {
           "type": "title",
           "settings": {
+            "heading_size": "h2"
           }
         },
         "description_zdcpQR": {
@@ -99,6 +101,7 @@
         "title_eaB9VQ": {
           "type": "title",
           "settings": {
+            "heading_size": "h2"
           }
         },
         "description_L9NWhf": {
