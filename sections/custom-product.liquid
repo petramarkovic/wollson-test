@@ -46,16 +46,6 @@
                   </ul>
               </div>
             </div>
-            <div>
-              {% for media in product.media %}
-                {{ media.preview_image.src | image_url: width: 96 | image_tag }}
-              {% endfor %}
-            </div>
-            <div>
-              {% for variant in product.variants %}
-                {{ variant.featured_media.src | image_url: width: 96 | image_tag }}
-              {% endfor %}
-            </div>
           </div>
         </div>
         <div class="custom-product__col custom-product__col-text--{{ section.settings.text_align }}">
