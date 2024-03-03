@@ -24,7 +24,7 @@
       {% if section.settings.product != blank %}
         <div class="custom-product__col">
           <div class="custom-product__gallery">
-            <div id="thumbnail-slider" class="splide">
+            <div id="{{ section.id }}" class="splide">
               <div class="splide__track">
                   <ul class="splide__list">
                     {% for media in product.media %}
@@ -208,6 +208,17 @@
   }
 </script>
 <script src="{{ 'splide-slider.js' | asset_url }}" defer="defer"></script>
+
+<script>
+  document.addEventListener( 'DOMContentLoaded', function () {
+    new Splide( '{{ section.id }}', {
+  		fixedWidth: 100,
+  		gap       : 10,
+  		rewind    : true,
+  		pagination: false,
+    } ).mount();
+  } );
+</script>
 <script src="{{ 'custom-product.js' | asset_url }}" defer="defer"></script>
 
 {% schema %}
