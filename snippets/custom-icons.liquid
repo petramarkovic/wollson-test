@@ -1,3 +1,9 @@
+{% style %}
+.custom-product__icons img {
+  width: {{ block.settings.icon_size }}px;
+}
+{% endstyle %}
+
 <div class="custom-product__icons">
   {% if block.settings.image_1 != blank %}
   <div>
