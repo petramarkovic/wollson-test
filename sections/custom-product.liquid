@@ -165,7 +165,6 @@
                             {{ product.selected_or_first_available_variant.compare_at_price | money_with_currency }}
                             <span>{{ product.selected_or_first_available_variant.price | money_with_currency }}</span>
                           </button>
-                          <!-- {{ form | payment_button }} -->
                           {% if section.settings.free_shipping_message == true %}
                             <p class="custom-product__message custom-product__message--mobile">Free US Shipping over $65 | Free US Returns</p>
                           {% endif %}
