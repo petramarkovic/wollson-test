@@ -332,9 +332,3 @@
   line-height: 18px;
   color: rgb(var(--color-foreground));
 }
-
-.custom-product .splide-slide img {
-  max-width: 100% !important;
-  object-fit: contain !important;
-  height: auto !important;
-}
