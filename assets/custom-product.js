@@ -78,7 +78,8 @@ if (!customElements.get('custom-product-form')) {
               if (!this.inputs || this.inputs.length === 0) {
                   return;
               }
-              const activeId = this.inputs[0].value;
+              const activeInput = Array.from(this.inputs).find(input => input.checked);
+              const activeId = activeInput.value;
               console.log(activeId, 'active');
               this.items.forEach((item, index) => {
                   const id = item.getAttribute('data-id');
