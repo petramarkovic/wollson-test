@@ -13,6 +13,19 @@
   max-width: calc(50% - 40px);
 }
 
+.custom-product__col-text--left {
+  text-align: left;
+}
+
+.custom-product__col-text--center {
+  text-align: center;
+}
+
+.custom-product__col-text--right {
+  text-align: right;
+}
+
+
 @media screen and (max-width: 992px) {
   .custom-product__col {
     flex: 1 1 100%;
