@@ -64,14 +64,17 @@ if (!customElements.get('custom-product-form')) {
                     input.removeAttribute('checked');
                 });
                 const selectedInput = this.querySelector(`.custom-product__variant input[type="radio"][value="${selectedOptionValue}"]`);
-              console.log(selectedInput)
                 if (selectedInput) {
                     selectedInput.setAttribute('checked', 'checked');
                 }
                 this.hiddenInput.setAttribute('value', selectedOptionValue);
                 this.items.forEach(item => {
                     const id = item.getAttribute('data-id');
-                    item.style.display = (id === selectedOptionValue) ? 'none' : 'block';
+                    if (id === selectedOptionValue) {
+                      item.style.display = 'block';
+                    } else {
+                      item.style.display= 'none';
+                    }
                 });
             }
 
