@@ -1,3 +1,9 @@
+{% style %}
+.custom-product__rating-star {
+  color: {{ block.settings.star_color }};
+}
+{% endstyle %}
+
 <div class="custom-product__rating">
   {% if block.settings.rating == 5 %}
     <span class="custom-product__rating-star">★</span>
