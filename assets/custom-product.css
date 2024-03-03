@@ -32,6 +32,9 @@
 h1.custom-product__title {
   font-size: 38px;
   line-height: 48px;
+  font-weight: 400;
+  margin: 4px 0 10px;
+  letter-spacing: -0.01em;
 }
 
 h2.custom-product__title {
@@ -45,6 +48,9 @@ h2.custom-product__title {
 h3.custom-product__title {
   font-size: 32px;
   line-height: 42px;
+  font-weight: 400;
+  margin: 4px 0 10px;
+  letter-spacing: -0.01em;
 }
 
 @media screen and (max-width: 992px) {
