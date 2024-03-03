@@ -193,7 +193,7 @@
   {
   {% for variant in product.variants %}
     "{{ variant.id }}": {
-      "featuredImage": "{{ variant.featured_image }}",
+      "featuredImage": "{{ variant.featured_media.src }}",
       "customProduct1": {
         "title": "{{ variant.metafields.custom.included_product_1.value.title }}",
         "description": "{{ variant.metafields.custom.included_product_1.value.description }}"
