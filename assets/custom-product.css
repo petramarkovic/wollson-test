@@ -29,7 +29,12 @@
   }
 }
 
-.custom-product__title {
+h1.custom-product__title {
+  font-size: 38px;
+  line-height: 48px;
+}
+
+h2.custom-product__title {
   font-size: 32px;
   line-height: 41.6px;
   font-weight: 400;
@@ -37,11 +42,24 @@
   letter-spacing: -0.01em;
 }
 
+h3.custom-product__title {
+  font-size: 32px;
+  line-height: 42px;
+}
+
 @media screen and (max-width: 992px) {
-  .custom-product__title {
+  h1.custom-product__title {
+    font-size: 32px;
+    line-height: 42px;
+  }
+  h2.custom-product__title {
     font-size: 28px;
     line-height: 36px;
     margin-bottom: 12px;
+  }
+  h3.custom-product__title {
+    font-size: 24px;
+    line-height: 30px;
   }
 }
 
