@@ -27,12 +27,10 @@
             <div id="{{ section.id }}" class="splide">
               <div class="splide__track">
                   <ul class="splide__list">
-                    {% for variant in product.variants %}
-                      {% for media in product.media %}
-                        <li class="splide__slide" data-id="{{ variant.id }}">
-                          {{ media.preview_image.src | image_url: width: 1000 | image_tag }}
-                        </li>
-                      {% endfor %}
+                    {% for media in product.media %}
+                      <li class="splide__slide" data-id="{{ variant.id }}">
+                        {{ media.preview_image.src | image_url: width: 1000 | image_tag }}
+                      </li>
                     {% endfor %}
                   </ul>
               </div>
@@ -40,12 +38,10 @@
             <div id="thumbnail-{{ section.id }}" class="splide">
               <div class="splide__track">
                   <ul class="splide__list">
-                    {% for variant in product.variants %}
-                      {% for media in product.media %}
-                        <li class="splide__slide" data-id="{{ variant.id }}">
-                          {{ media.preview_image.src | image_url: width: 50 | image_tag }}
-                        </li>
-                      {% endfor %}
+                    {% for media in product.media %}
+                      <li class="splide__slide" data-id="{{ variant.id }}">
+                        {{ media.preview_image.src | image_url: width: 50 | image_tag }}
+                      </li>
                     {% endfor %}
                   </ul>
               </div>
