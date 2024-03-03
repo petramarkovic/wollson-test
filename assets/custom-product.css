@@ -4,6 +4,10 @@
   flex-wrap: wrap;
 }
 
+.custom-product--reverse {
+  flex-direction: row-reverse;
+}
+
 .custom-product__col {
   flex: 1 1 calc(50% - 40px);
   max-width: calc(50% - 40px);
