@@ -27,7 +27,7 @@
         <div class="custom-product__col">
           {% render 'product-media-gallery', product: product, variant_images: variant_images, is_duplicate: false %}
         </div>
-        <div class="custom-product__col">
+        <div class="custom-product__col custom-product__col-text--{{ section.settings.text_align }}">
           {%- for block in section.blocks -%}
             {%- case block.type -%}
               {%- when '@app' -%}
@@ -204,6 +204,26 @@
       "id": "gallery_first_desktop",
       "label": "Gallery first on desktop",
       "default": true
+    },
+    {
+      "type": "select",
+      "id": "text_align",
+      "label": "Text align",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "left"
     },
     {
       "type": "color_scheme",
