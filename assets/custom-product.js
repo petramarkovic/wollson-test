@@ -19,6 +19,7 @@ if (!customElements.get('custom-product-form')) {
                 this.quantityButtonsEvents();
                 this.inputsEvents();
                 this.loadMetafields();
+              console.log(this.variantData)
             }
 
             onSubmitHandler(e) {
