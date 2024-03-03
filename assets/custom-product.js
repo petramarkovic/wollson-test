@@ -55,6 +55,7 @@ if (!customElements.get('custom-product-form')) {
                 this.inputs.forEach(input => {
                     input.addEventListener('change', () => {
                         this.handleInputSelection(input.value);
+                      console.log(input.value);
                     });
                 });
             }
@@ -80,10 +81,8 @@ if (!customElements.get('custom-product-form')) {
               }
               const activeInput = Array.from(this.inputs).find(input => input.checked);
               const activeId = activeInput.value;
-              console.log(activeId, 'active');
               this.items.forEach((item, index) => {
                   const id = item.getAttribute('data-id');
-                  console.log(id, 'id');
                   if (activeId !== id) {
                       item.style.display = 'none';
                   } else {
