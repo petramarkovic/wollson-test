@@ -24,6 +24,17 @@
       {% if section.settings.product != blank %}
         <div class="custom-product__col">
           <div class="custom-product__gallery">
+            <div id="thumbnail-slider" class="splide">
+              <div class="splide__track">
+                  <ul class="splide__list">
+                    {% for media in product.media %}
+                      <li class="splide__slide">
+                        {{ media.preview_image.src | image_url: width: 96 | image_tag }}
+                      </li>
+                    {% endfor %}
+                  </ul>
+              </div>
+            </div>
             <div>
               {% for media in product.media %}
                 {{ media.preview_image.src | image_url: width: 96 | image_tag }}
