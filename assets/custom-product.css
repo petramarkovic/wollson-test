@@ -292,7 +292,7 @@ h3.custom-product__title {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  margin-top: 8px;
+  margin: 8px 0 32px;
 }
 
 .custom-product__message--shop-pay img {
