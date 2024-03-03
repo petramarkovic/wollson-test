@@ -79,7 +79,10 @@ if (!customElements.get('custom-product-form')) {
                   return;
               }
               const activeId = this.inputs[0].value;
+              console.log(activeId, 'active');
               this.items.forEach((item, index) => {
+                  const id = item.getAttribute('data-id');
+                  console.log(id, 'id');
                   if (index === 0) {
                       item.style.display = 'none';
                   } else {
