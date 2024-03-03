@@ -6,7 +6,10 @@
         "rating_CKQKr9": {
           "type": "rating",
           "settings": {
-            "rating": 5
+            "rating": 5,
+            "number_of_reviews": 107,
+            "display_number_of_reviews": true,
+            "star_color": "#f8c063"
           }
         },
         "title_BffgQq": {
