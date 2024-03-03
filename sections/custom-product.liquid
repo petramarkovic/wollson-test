@@ -29,16 +29,15 @@
           <media-gallery
             id="MediaGallery-{{ section.id }}"
             role="region"
-            aria-label="{{ 'products.product.media.gallery_viewer' | t }}"
             data-desktop-layout="thumbnail_slider"
           >
             <div
               id="GalleryViewer-{{ section.id }}"
-              class="product__media-list{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
+              class="product__media-list"
             >
               {%- if section.settings.product != blank -%}
-                {%- if product.selected_or_first_available_variant.featured_media != null -%}
-                  {%- assign media = product.selected_or_first_available_variant.featured_media -%}
+                {%- if product.featured_media != null -%}
+                  {%- assign media = product.featured_media -%}
                   <div class="product__media-item" data-media-id="{{ section.id }}-{{ media.id }}">
                     {% render 'product-thumbnail',
                       media: media,
@@ -46,7 +45,6 @@
                       loop: section.settings.enable_video_looping,
                       modal_id: section.id,
                       xr_button: false,
-                      media_width: media_width,
                       media_fit: section.settings.media_fit,
                       constrain_to_viewport: section.settings.constrain_to_viewport
                     %}
@@ -69,7 +67,6 @@
                         loop: section.settings.enable_video_looping,
                         modal_id: section.id,
                         xr_button: false,
-                        media_width: media_width,
                         media_fit: section.settings.media_fit,
                         constrain_to_viewport: section.settings.constrain_to_viewport
                       %}
