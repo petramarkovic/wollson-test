@@ -170,7 +170,7 @@
                           {% endif %}
                           {% if section.settings.shop_pay_message == true %}
                             <p class="custom-product__message custom-product__message--shop-pay">4 interest-free installments of $18.00 with
-                              {% if section.settins.shop_pay_logo  %}
+                              {% if section.settins.shop_pay_logo != blank  %}
                                 {{ section.settings.shop_pay_logo | image_url: width: 59 | image_tag }}
                               {% endif %}
                             </p>
