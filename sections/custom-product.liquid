@@ -145,8 +145,13 @@
                             <span>{{ product.selected_or_first_available_variant.price | money_with_currency }}</span>
                           </button>
                           <!-- {{ form | payment_button }} -->
+                          {% if section.settings.shop_pay_message == true %}
+                            <p class="custom-product__message">Free US Shipping over $65 | Free US Returns</p>
+                          {% endif %}
                           {% if section.settings.free_shipping_message == true %}
-                            <p class="custom-product__message custom-product__message--mobile">Free US Shipping over $65 | Free US Returns</p>
+                            <p class="custom-product__message custom-product__message--mobile">4 interest-free installments of $18.00 with
+                              {{ section.settings.shop_pay_logo | image_url: width: 59 | image_tag }}
+                            </p>
                           {% endif %}
                         </div>
                       </div>
@@ -232,6 +237,23 @@
       "default": "scheme-1"
     },
     {
+      "type": "checkbox",
+      "id": "free_shipping_message",
+      "label": "Dispay free shipping & returns message",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "shop_pay_message",
+      "label": "Dispay Shop Pay message",
+      "default": true
+    },
+    {
+      "type": "image_picker",
+      "id": "shop_pay_logo",
+      "label": "Shop Pay Logo"
+    },
+    {
       "type": "range",
       "id": "padding_top",
       "min": 0,
@@ -250,12 +272,6 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
       "default": 36
-    },
-    {
-      "type": "checkbox",
-      "id": "free_shipping_message",
-      "label": "Dispay free shipping & returns message",
-      "default": true
     }
   ],
   "blocks": [
