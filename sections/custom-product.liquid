@@ -33,7 +33,13 @@
               {%- when '@app' -%}
                 {% render block %}
               {% when 'title' %}
-                <h2 class="custom-product__title">{{ product.title }}</h2>
+                {% if block.settins.heading_size == 'h1' %}
+                  <h1 class="custom-product__title">{{ product.title }}</h1>
+                {% elsif block.settins.heading_size == 'h2' %}
+                  <h2 class="custom-product__title">{{ product.title }}</h2>
+                {% elsif block.settins.heading_size == 'h3' %}
+                  <h3 class="custom-product__title">{{ product.title }}</h3>
+                {% endif %}
               {% when 'description' %}
                 <p class="custom-product__description">
                   {{- product.description -}}
@@ -239,7 +245,29 @@
     {
       "type": "title",
       "name": "Product Title",
-      "limit": 1
+      "limit": 1,
+      "settings": [
+        {
+          "type": "select",
+          "id": "heading_size",
+          "label": "Heading size",
+          "options": [
+            {
+              "value": "h1",
+              "label": "H1"
+            },
+            {
+              "value": "h2",
+              "label": "H2"
+            },
+            {
+              "value": "h3",
+              "label": "H3"
+            }
+          ],
+          "default": "h2"
+        }
+      ]
     },
     {
       "type": "description",
