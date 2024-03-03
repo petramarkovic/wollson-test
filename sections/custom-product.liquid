@@ -22,7 +22,7 @@
 
 <div class="section-{{ section.id }}-padding color-{{ section.settings.section_color_scheme }}">
   <div class="page-width">
-    <div class="custom-product">
+    <div class="custom-product {% unless section.settings.gallery_first_desktop == true %} custom-product--reverse{% endunless %}">
       {% if section.settings.product != blank %}
         <div class="custom-product__col">
           {% render 'product-media-gallery', product: product, variant_images: variant_images, is_duplicate: false %}
@@ -199,6 +199,12 @@
 		"id": "product",
 		"label": "Product"
 	},
+    {
+      "type": "checkbox",
+      "id": "gallery_first_desktop",
+      "label": "Gallery first on desktop",
+      "default": true
+    },
     {
       "type": "color_scheme",
       "id": "section_color_scheme",
