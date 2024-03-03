@@ -19,11 +19,9 @@ if (!customElements.get('custom-product-form')) {
                 this.quantityButtonsEvents();
                 this.inputsEvents();
                 this.loadMetafields();
-              console.log(this.variantData)
             }
 
             onSubmitHandler(e) {
-                // e.preventDefault();
                 if (this.submitButton.getAttribute('aria-disabled') === 'true') return;
                 this.submitButton.setAttribute('aria-disabled', true);
                 const formData = {};
@@ -32,7 +30,6 @@ if (!customElements.get('custom-product-form')) {
                         formData[element.name] = element.value;
                     }
                 }
-                console.log(formData);
             }
 
             quantityButtonsEvents() {
