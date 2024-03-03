@@ -323,10 +323,6 @@
   }
 }
 
-.custom-product__icons img {
-  max-width: 100%
-}
-
 .custom-product__rating {
   display: inline-block;
 }
