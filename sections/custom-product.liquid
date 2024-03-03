@@ -28,11 +28,6 @@
         <div class="custom-product__col">
           <div class="custom-product__gallery">
             <div>
-              {% if product.featured_image.src != blank %}
-                {{ product.featured_image.src | image_url: width: 96 | image_tag }}
-              {% endif %}
-            </div>
-            <div>
               {% for media in product.media %}
                 {{ media.preview_image.src | image_url: width: 96 | image_tag }}
               {% endfor %}
