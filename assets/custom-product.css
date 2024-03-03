@@ -288,6 +288,17 @@ h3.custom-product__title {
   margin-bottom: 8px;
 }
 
+.custom-product__message--shop-pay {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 8px;
+}
+
+.custom-product__message--shop-pay img {
+  margin-left: 6px;
+}
+
 @media screen and (max-width: 992px) {
   .custom-product__message--mobile {
     display: block;
